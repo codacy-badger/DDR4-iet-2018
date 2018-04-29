@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "431060445453",
-    "firebase_url": "https://outlay-7a215.firebaseio.com",
-    "project_id": "outlay-7a215",
-    "storage_bucket": "outlay-7a215.appspot.com"
+    "project_number": "917885990336",
+    "firebase_url": "https://iet-outlay.firebaseio.com",
+    "project_id": "iet-outlay",
+    "storage_bucket": "iet-outlay.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:431060445453:android:4b9ae3bbb6042ac6",
+        "mobilesdk_app_id": "1:917885990336:android:d8f05eb790415ef3",
         "android_client_info": {
           "package_name": "com.bme.iet.outlay"
         }
       },
       "oauth_client": [
         {
-          "client_id": "431060445453-7cob1va4iojgv1ddoksukups6b3l2r01.apps.googleusercontent.com",
+          "client_id": "917885990336-bcnjf4ftopdeef3jr746n6lvbqc81gq1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAIj3qqM55cf-udMaya0-ejStj4k_pzz3k"
+          "current_key": "AIzaSyBJNbYDm3C67iVF86-0TOKorA-37AeMTUo"
         }
       ],
       "services": {
