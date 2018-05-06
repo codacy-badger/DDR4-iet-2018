@@ -9,6 +9,7 @@ buildscript {
 }
 apply plugin: 'com.android.application'
 
+
 repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
@@ -38,13 +39,13 @@ android {
     }
 
     signingConfigs {
-        release {
-            if (propsFile.exists()) {
-                storeFile file(props['RELEASE_STORE_FILE'])
-                storePassword props['RELEASE_STORE_PASSWORD']
-                keyAlias props['RELEASE_KEY_ALIAS']
-                keyPassword props['RELEASE_KEY_PASSWORD']
-            }
+        config {
+            keyAlias 'keystore'
+            keyPassword 'iet2018ddr4'
+            storeFile file('C:/Users/Paksi Péter/.android/keystores/keystore.jks')
+            storePassword 'iet2018ddr4'
+        }
+        config1 {
         }
     }
 
@@ -57,9 +58,7 @@ android {
         }
         release {
             buildConfigField "boolean", "USE_ANALYTICS", "true"
-
-            signingConfig signingConfigs.release
-
+            signingConfig signingConfigs.config
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -83,48 +82,41 @@ android {
         exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/notice.txt'
+
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':domain')
-
     //Google
     apt "com.google.dagger:dagger-compiler:${libs.dagger}"
-
     //Support
+
     compile "com.android.support:support-v13:${libs.supportVersion}"
     compile "com.android.support:appcompat-v7:${libs.supportVersion}"
     compile "com.android.support:design:${libs.supportVersion}"
     compile "com.android.support:cardview-v7:${libs.supportVersion}"
     compile "com.android.support:recyclerview-v7:${libs.supportVersion}"
-
     //Rx
     compile "io.reactivex:rxandroid:${libs.rxandroid}"
-
     //UI
     compile('com.mikepenz:materialdrawer:5.9.1@aar') {
         transitive = true
     }
     compile 'com.mikepenz:material-design-iconic-typeface:+@aar'
-
     compile 'com.jakewharton:butterknife:7.0.1'
-
-    compile "com.github.johnkil.print:print:1.3.1"
-    compile(group: 'uz.shift', name: 'colorpicker', version: '0.5', ext: 'aar')
+    compile 'com.github.johnkil.print:print:1.3.1'
+    compile 'uz.shift:colorpicker:0.5@aar'
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
     compile 'com.afollestad.material-dialogs:core:0.9.4.5'
     compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
-
     compile "com.google.firebase:firebase-core:${libs.firebase}"
     compile "com.google.firebase:firebase-auth:${libs.firebase}"
     compile "com.google.firebase:firebase-database:${libs.firebase}"
-
     compile 'ca.barrenechea.header-decor:header-decor:0.2.8'
-
     releaseCompile "com.google.firebase:firebase-crash:${libs.firebase}"
     stagingCompile "com.google.firebase:firebase-crash:${libs.firebase}"
 }
