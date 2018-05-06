@@ -201,22 +201,22 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
     }
 
     public void goToExpensesList(Date date, int selectedPeriod, String category) {
-        date = DateUtils.fillCurrentTime(date);
-        Date startDate = date;
-        Date endDate = date;
+        Date dateWithCurrentTime = DateUtils.fillCurrentTime(date);
+        Date startDate = dateWithCurrentTime;
+        Date endDate = dateWithCurrentTime;
 
         switch (selectedPeriod) {
             case ReportFragment.PERIOD_DAY:
-                startDate = DateUtils.getDayStart(date);
-                endDate = DateUtils.getDayEnd(date);
+                startDate = DateUtils.getDayStart(dateWithCurrentTime);
+                endDate = DateUtils.getDayEnd(dateWithCurrentTime);
                 break;
             case ReportFragment.PERIOD_WEEK:
-                startDate = DateUtils.getWeekStart(date);
-                endDate = DateUtils.getWeekEnd(date);
+                startDate = DateUtils.getWeekStart(dateWithCurrentTime);
+                endDate = DateUtils.getWeekEnd(dateWithCurrentTime);
                 break;
             case ReportFragment.PERIOD_MONTH:
-                startDate = DateUtils.getMonthStart(date);
-                endDate = DateUtils.getMonthEnd(date);
+                startDate = DateUtils.getMonthStart(dateWithCurrentTime);
+                endDate = DateUtils.getMonthEnd(dateWithCurrentTime);
                 break;
             default:
                 Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
