@@ -1,7 +1,7 @@
 language: android
 before_install:
   - chmod +x gradlew
-  - yes | sdkmanager "platforms;android-25"
+  - yes | sudo sdkmanager --licenses
 android:
   components:
     - tools
