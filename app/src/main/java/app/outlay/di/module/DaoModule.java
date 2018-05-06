@@ -4,8 +4,6 @@ package app.outlay.di.module;
  * Created by Bogdan Melnychuk on 12/17/15.
  */
 public class DaoModule {
-    private static final String DATABASE_NAME = "outlay_db";
-
 //    @Provides
 //    @Singleton
 //    public DaoMaster.DevOpenHelper provideDatabaseHelper(Context application) {

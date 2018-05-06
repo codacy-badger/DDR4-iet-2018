@@ -22,14 +22,6 @@ public class AppPreferences {
         return PreferenceManager.getDefaultSharedPreferences(context);
     }
 
-    private void putString(String key, String value) {
-        getPreferences().edit().putString(key, value).apply();
-    }
-
-    private String getString(String key) {
-        return getPreferences().getString(key, null);
-    }
-
     private void putInt(String key, int value) {
         getPreferences().edit().putInt(key, value).apply();
     }
@@ -40,10 +32,6 @@ public class AppPreferences {
 
     private void putBoolean(String key, boolean value) {
         getPreferences().edit().putBoolean(key, value).apply();
-    }
-
-    private boolean getBoolean(String key) {
-        return getPreferences().getBoolean(key, false);
     }
 
     private boolean getBoolean(String key, boolean defValue) {

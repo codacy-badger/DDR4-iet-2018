@@ -27,14 +27,14 @@ import butterknife.ButterKnife;
 public class SettingsFragment extends BaseMvpFragment<SettingsView, SettingsPresenter> implements SettingsView {
 
     @Bind(R.id.toolbar)
-    protected Toolbar toolbar;
+    Toolbar toolbar;
     @Bind(R.id.themeControl)
-    protected View themeControl;
+    View themeControl;
     @Bind(R.id.themeName)
-    protected TextView themeName;
+    TextView themeName;
 
     @Inject
-    protected SettingsPresenter presenter;
+    SettingsPresenter presenter;
 
     @Override
     public SettingsPresenter createPresenter() {

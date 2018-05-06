@@ -1,6 +1,5 @@
 package app.outlay.view.adapter;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,10 +7,9 @@ import android.view.ViewGroup;
 
 import com.github.johnkil.print.PrintView;
 
-import app.outlay.utils.IconUtils;
-
 import java.util.List;
 
+import app.outlay.utils.IconUtils;
 import app.outlay.view.OutlayTheme;
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -69,7 +67,6 @@ public class IconsGridAdapter extends RecyclerView.Adapter<IconsGridAdapter.Cate
 
     @Override
     public void onBindViewHolder(CategoryViewHolder holder, int position) {
-        Context context = holder.categoryContainer.getContext();
         String currentOne = items.get(position);
 
         IconUtils.loadCategoryIcon(currentOne, holder.categoryIcon);

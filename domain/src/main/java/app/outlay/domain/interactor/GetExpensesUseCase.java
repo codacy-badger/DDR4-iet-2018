@@ -1,15 +1,14 @@
 package app.outlay.domain.interactor;
 
+import java.util.Date;
+
+import javax.inject.Inject;
+
 import app.outlay.core.executor.PostExecutionThread;
 import app.outlay.core.executor.ThreadExecutor;
 import app.outlay.domain.model.Report;
 import app.outlay.domain.repository.CategoryRepository;
 import app.outlay.domain.repository.ExpenseRepository;
-
-import java.util.Date;
-
-import javax.inject.Inject;
-
 import rx.Observable;
 
 /**
@@ -18,7 +17,6 @@ import rx.Observable;
 
 public class GetExpensesUseCase extends UseCase<GetExpensesUseCase.Input, Report> {
     private ExpenseRepository expenseRepository;
-    private CategoryRepository categoryRepository;
 
     @Inject
     public GetExpensesUseCase(
@@ -29,7 +27,6 @@ public class GetExpensesUseCase extends UseCase<GetExpensesUseCase.Input, Report
     ) {
         super(threadExecutor, postExecutionThread);
         this.expenseRepository = expenseRepository;
-        this.categoryRepository = categoryRepository;
     }
 
     @Override
