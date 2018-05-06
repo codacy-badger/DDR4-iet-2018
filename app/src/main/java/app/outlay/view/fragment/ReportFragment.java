@@ -12,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import app.outlay.core.utils.DateUtils;
 import app.outlay.domain.model.Report;
@@ -29,7 +30,7 @@ import java.util.Date;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by Bogdan Melnychuk on 1/20/16.
@@ -41,20 +42,20 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
     public static final int PERIOD_WEEK = 1;
     public static final int PERIOD_MONTH = 2;
 
-    @Bind(app.outlay.R.id.recyclerView)
-    RecyclerView recyclerView;
+    @BindView(app.outlay.R.id.recyclerView)
+    protected RecyclerView recyclerView;
 
-    @Bind(app.outlay.R.id.tabs)
-    TabLayout tabLayout;
+    @BindView(app.outlay.R.id.tabs)
+    protected TabLayout tabLayout;
 
-    @Bind(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    @BindView(app.outlay.R.id.toolbar)
+    protected Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.noResults)
-    View noResults;
+    @BindView(app.outlay.R.id.noResults)
+    protected View noResults;
 
     @Inject
-    ReportPresenter presenter;
+    protected ReportPresenter presenter;
 
     private int selectedPeriod;
     private Date selectedDate;
@@ -111,6 +112,10 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
             case app.outlay.R.id.action_list:
                 analytics().trackViewExpensesList();
                 goToExpensesList(selectedDate, selectedPeriod);
+                break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -142,6 +147,9 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
                         break;
                     case ReportFragment.PERIOD_MONTH:
                         analytics().trackViewMonthlyExpenses();
+                        break;
+                    default:
+                        Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 updateTitle();
@@ -182,6 +190,9 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
                 endDate = DateUtils.getMonthEnd(selectedDate);
                 setTitle(DateUtils.toShortString(startDate) + " - " + DateUtils.toShortString(endDate));
                 break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 
@@ -190,22 +201,25 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
     }
 
     public void goToExpensesList(Date date, int selectedPeriod, String category) {
-        date = DateUtils.fillCurrentTime(date);
-        Date startDate = date;
-        Date endDate = date;
+        Date dateWithCurrentTime = DateUtils.fillCurrentTime(date);
+        Date startDate = dateWithCurrentTime;
+        Date endDate = dateWithCurrentTime;
 
         switch (selectedPeriod) {
             case ReportFragment.PERIOD_DAY:
-                startDate = DateUtils.getDayStart(date);
-                endDate = DateUtils.getDayEnd(date);
+                startDate = DateUtils.getDayStart(dateWithCurrentTime);
+                endDate = DateUtils.getDayEnd(dateWithCurrentTime);
                 break;
             case ReportFragment.PERIOD_WEEK:
-                startDate = DateUtils.getWeekStart(date);
-                endDate = DateUtils.getWeekEnd(date);
+                startDate = DateUtils.getWeekStart(dateWithCurrentTime);
+                endDate = DateUtils.getWeekEnd(dateWithCurrentTime);
                 break;
             case ReportFragment.PERIOD_MONTH:
-                startDate = DateUtils.getMonthStart(date);
-                endDate = DateUtils.getMonthEnd(date);
+                startDate = DateUtils.getMonthStart(dateWithCurrentTime);
+                endDate = DateUtils.getMonthEnd(dateWithCurrentTime);
+                break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
                 break;
         }
         Navigator.goToExpensesList(getActivity(), startDate, endDate, category);

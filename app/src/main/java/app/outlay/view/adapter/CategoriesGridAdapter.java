@@ -21,7 +21,7 @@ import app.outlay.view.numpad.NumpadView;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -111,14 +111,14 @@ public class CategoriesGridAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     public class CategoryViewHolder extends RecyclerView.ViewHolder {
-        @Bind(app.outlay.R.id.categoryContainer)
-        View categoryContainer;
+        @BindView(app.outlay.R.id.categoryContainer)
+        protected View categoryContainer;
 
-        @Bind(app.outlay.R.id.categoryIcon)
-        ImageView categoryIcon;
+        @BindView(app.outlay.R.id.categoryIcon)
+        protected ImageView categoryIcon;
 
-        @Bind(app.outlay.R.id.categoryTitle)
-        TextView categoryTitle;
+        @BindView(app.outlay.R.id.categoryTitle)
+        protected TextView categoryTitle;
 
         public CategoryViewHolder(View v) {
             super(v);
@@ -127,8 +127,8 @@ public class CategoriesGridAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     public class NumpadViewHolder extends RecyclerView.ViewHolder {
-        @Bind(app.outlay.R.id.numpadView)
-        NumpadView numpadView;
+        @BindView(app.outlay.R.id.numpadView)
+        protected NumpadView numpadView;
 
         public NumpadViewHolder(View v) {
             super(v);

@@ -22,7 +22,7 @@ import app.outlay.view.helper.AnimationUtils;
 import app.outlay.view.helper.TextWatcherAdapter;
 import app.outlay.view.helper.ViewHelper;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -33,41 +33,41 @@ public class LoginForm extends RelativeLayout {
     public static final int MODE_SIGN_IN = 0;
     public static final int MODE_SIGN_UP = 1;
 
-    @Bind(app.outlay.R.id.signInForm)
-    View signInForm;
+    @BindView(app.outlay.R.id.signInForm)
+    protected View signInForm;
 
-    @Bind(app.outlay.R.id.signUpForm)
-    View signUpForm;
+    @BindView(app.outlay.R.id.signUpForm)
+    protected View signUpForm;
 
-    @Bind(app.outlay.R.id.fab)
-    FloatingActionButton fab;
+    @BindView(app.outlay.R.id.fab)
+    protected FloatingActionButton fab;
 
-    @Bind(app.outlay.R.id.signUpButton)
-    Button signUpButton;
+    @BindView(app.outlay.R.id.signUpButton)
+    protected Button signUpButton;
 
-    @Bind(app.outlay.R.id.signInButton)
-    Button signInButton;
+    @BindView(app.outlay.R.id.signInButton)
+    protected Button signInButton;
 
-    @Bind(app.outlay.R.id.forgetPassword)
-    Button forgetPassword;
+    @BindView(app.outlay.R.id.forgetPassword)
+    protected Button forgetPassword;
 
-    @Bind(app.outlay.R.id.skipButton)
-    Button skipButton;
+    @BindView(app.outlay.R.id.skipButton)
+    protected Button skipButton;
 
-    @Bind(app.outlay.R.id.signInInputEmail)
-    TextInputLayout signInEmail;
+    @BindView(app.outlay.R.id.signInInputEmail)
+    protected TextInputLayout signInEmail;
 
-    @Bind(app.outlay.R.id.signInInputPassword)
-    TextInputLayout signInPassword;
+    @BindView(app.outlay.R.id.signInInputPassword)
+    protected TextInputLayout signInPassword;
 
-    @Bind(app.outlay.R.id.signUpInputEmail)
-    TextInputLayout signUpEmail;
+    @BindView(app.outlay.R.id.signUpInputEmail)
+    protected TextInputLayout signUpEmail;
 
-    @Bind(app.outlay.R.id.signUpInputPassword)
-    TextInputLayout signUpPassword;
+    @BindView(app.outlay.R.id.signUpInputPassword)
+    protected TextInputLayout signUpPassword;
 
-    @Bind(app.outlay.R.id.signUpInputRepeatPassword)
-    TextInputLayout signUpRepeatPassword;
+    @BindView(app.outlay.R.id.signUpInputRepeatPassword)
+    protected TextInputLayout signUpRepeatPassword;
 
     private OnSubmitClickListener signInListener;
     private OnSubmitClickListener signUpListener;
@@ -75,26 +75,26 @@ public class LoginForm extends RelativeLayout {
 
     public LoginForm(Context context) {
         super(context);
-        init(null);
+        init();
     }
 
     public LoginForm(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(attrs);
+        init();
     }
 
     public LoginForm(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(attrs);
+        init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public LoginForm(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init(attrs);
+        init();
     }
 
-    private void init(AttributeSet attrs) {
+    private void init() {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View parent = inflater.inflate(app.outlay.R.layout.view_login_form, this, true);
         ButterKnife.bind(this, parent);
@@ -220,11 +220,6 @@ public class LoginForm extends RelativeLayout {
         fab.setVisibility(visible ? VISIBLE : GONE);
     }
 
-    private void toggleViewVisibility(View view) {
-        boolean visible = view.getVisibility() == View.VISIBLE;
-        view.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
-    }
-
     private Point getViewCenter() {
         int x = signUpForm.getRight();
         int y = signUpForm.getTop() + ViewHelper.dpToPx(56);
@@ -239,12 +234,12 @@ public class LoginForm extends RelativeLayout {
         void onPasswordForget();
     }
 
-    boolean isEmailValid(CharSequence email) {
+    protected boolean isEmailValid(CharSequence email) {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
     private static class ClearErrorTextWatcher extends TextWatcherAdapter {
-        TextInputLayout inputLayout;
+        private TextInputLayout inputLayout;
 
         public ClearErrorTextWatcher(TextInputLayout inputLayout) {
             this.inputLayout = inputLayout;

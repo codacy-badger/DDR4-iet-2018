@@ -36,37 +36,37 @@ public class AppModule {
 
     @Provides
     @Singleton
-    Context provideAppContext() {
+    protected Context provideAppContext() {
         return context;
     }
 
     @Provides
     @Singleton
-    AppPreferences provideAppPreferences() {
+    protected AppPreferences provideAppPreferences() {
         return new AppPreferences(context);
     }
 
     @Provides
     @Singleton
-    PostExecutionThread providePostExecutionThread(UIThread uiThread) {
+    protected PostExecutionThread providePostExecutionThread(UIThread uiThread) {
         return uiThread;
     }
 
     @Provides
     @Singleton
-    ThreadExecutor provideThreadExecutor(JobExecutor jobExecutor) {
+    protected ThreadExecutor provideThreadExecutor(JobExecutor jobExecutor) {
         return jobExecutor;
     }
 
     @Provides
     @Singleton
-    Analytics provideAnalytics() {
+    protected Analytics provideAnalytics() {
         return new FirebaseAnalyticsImpl(context);
     }
 
     @Provides
     @Singleton
-    List<Category> defaultCategories() {
+    protected List<Category> defaultCategories() {
         List<Category> result = new ArrayList<>();
         result.add(category(context.getString(app.outlay.R.string.category_car), "ic_cars", ContextCompat.getColor(context, app.outlay.R.color.blue), 0));
         result.add(category(context.getString(app.outlay.R.string.category_house), "ic_house", ContextCompat.getColor(context, app.outlay.R.color.red), 1));
@@ -81,7 +81,7 @@ public class AppModule {
 
     @Provides
     @Singleton
-    Gson providerGson() {
+    protected Gson providerGson() {
         Gson gson = new GsonBuilder().create();
         return gson;
     }

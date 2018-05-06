@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.mikepenz.material_design_iconic_typeface_library.MaterialDesignIconic;
 
@@ -39,7 +40,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -50,29 +51,29 @@ public class ExpensesDetailsFragment extends BaseMvpFragment<ExpenseDetailsView,
     public static final String ARG_EXPENSE_ID = "_argExpenseId";
     public static final String ARG_DATE = "_argDate";
 
-    @Bind(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    @BindView(app.outlay.R.id.toolbar)
+    protected Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.categoryTitle)
-    MaterialAutoCompleteTextView categoryTitle;
+    @BindView(app.outlay.R.id.categoryTitle)
+    protected MaterialAutoCompleteTextView categoryTitle;
 
-    @Bind(app.outlay.R.id.categoryIcon)
-    ImageView categoryIcon;
+    @BindView(app.outlay.R.id.categoryIcon)
+    protected ImageView categoryIcon;
 
-    @Bind(app.outlay.R.id.amount)
-    EditText amount;
+    @BindView(app.outlay.R.id.amount)
+    protected EditText amount;
 
-    @Bind(app.outlay.R.id.note)
-    EditText note;
+    @BindView(app.outlay.R.id.note)
+    protected EditText note;
 
-    @Bind(app.outlay.R.id.date)
-    EditText dateEdit;
+    @BindView(app.outlay.R.id.date)
+    protected EditText dateEdit;
 
-    @Bind(app.outlay.R.id.amountInputLayout)
-    TextInputLayout amountInputLayout;
+    @BindView(app.outlay.R.id.amountInputLayout)
+    protected TextInputLayout amountInputLayout;
 
     @Inject
-    ExpenseDetailsPresenter presenter;
+    protected ExpenseDetailsPresenter presenter;
     private CategoryAutoCompleteAdapter autoCompleteAdapter;
     private Expense expense;
     private Category selectedCategory;
@@ -143,6 +144,9 @@ public class ExpensesDetailsFragment extends BaseMvpFragment<ExpenseDetailsView,
                 analytics().trackExpenseDeleted(expense);
                 presenter.deleteExpense(expense);
                 getActivity().onBackPressed();
+                break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

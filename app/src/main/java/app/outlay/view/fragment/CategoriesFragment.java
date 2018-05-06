@@ -4,7 +4,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -16,21 +15,20 @@ import android.widget.ImageView;
 
 import com.mikepenz.material_design_iconic_typeface_library.MaterialDesignIconic;
 
-import app.outlay.utils.IconUtils;
-import app.outlay.view.adapter.CategoriesDraggableGridAdapter;
-import app.outlay.domain.model.Category;
-import app.outlay.mvp.presenter.CategoriesPresenter;
-import app.outlay.mvp.view.CategoriesView;
-import app.outlay.view.Navigator;
-import app.outlay.view.fragment.base.BaseMvpFragment;
-import app.outlay.view.helper.itemtouch.OnDragListener;
-import app.outlay.view.helper.itemtouch.SimpleItemTouchHelperCallback;
-
 import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import app.outlay.domain.model.Category;
+import app.outlay.mvp.presenter.CategoriesPresenter;
+import app.outlay.mvp.view.CategoriesView;
+import app.outlay.utils.IconUtils;
+import app.outlay.view.Navigator;
+import app.outlay.view.adapter.CategoriesDraggableGridAdapter;
+import app.outlay.view.fragment.base.BaseMvpFragment;
+import app.outlay.view.helper.itemtouch.OnDragListener;
+import app.outlay.view.helper.itemtouch.SimpleItemTouchHelperCallback;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -38,23 +36,23 @@ import butterknife.ButterKnife;
  */
 public class CategoriesFragment extends BaseMvpFragment<CategoriesView, CategoriesPresenter> implements OnDragListener, CategoriesView {
 
-    @Bind(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    @BindView(app.outlay.R.id.toolbar)
+    protected Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.categoriesGrid)
-    RecyclerView categoriesGrid;
+    @BindView(app.outlay.R.id.categoriesGrid)
+    protected RecyclerView categoriesGrid;
 
-    @Bind(app.outlay.R.id.noContent)
-    View noContent;
+    @BindView(app.outlay.R.id.noContent)
+    protected View noContent;
 
-    @Bind(app.outlay.R.id.noContentImage)
-    ImageView noContentImage;
+    @BindView(app.outlay.R.id.noContentImage)
+    protected ImageView noContentImage;
 
-    @Bind(app.outlay.R.id.fab)
-    FloatingActionButton fab;
+    @BindView(app.outlay.R.id.fab)
+    protected FloatingActionButton fab;
 
     @Inject
-    CategoriesPresenter presenter;
+    protected CategoriesPresenter presenter;
 
     private ItemTouchHelper mItemTouchHelper;
     private CategoriesDraggableGridAdapter adapter;

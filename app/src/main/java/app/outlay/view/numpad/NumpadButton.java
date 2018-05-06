@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.github.johnkil.print.PrintView;
 
 import app.outlay.R;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -23,12 +23,12 @@ import butterknife.ButterKnife;
 public class NumpadButton extends RelativeLayout {
 
     @Nullable
-    @Bind(app.outlay.R.id.textValue)
-    TextView textValue;
+    @BindView(app.outlay.R.id.textValue)
+    protected TextView textValue;
 
     @Nullable
-    @Bind(app.outlay.R.id.numpadIcon)
-    PrintView numpadIcon;
+    @BindView(app.outlay.R.id.numpadIcon)
+    protected PrintView numpadIcon;
 
     public NumpadButton(Context context) {
         super(context);

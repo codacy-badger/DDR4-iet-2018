@@ -29,7 +29,7 @@ import app.outlay.view.progress.ProgressLayout;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -151,16 +151,16 @@ public class ReportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     public class ReportViewHolder extends RecyclerView.ViewHolder {
-        @Bind(app.outlay.R.id.amount)
-        TextView amountText;
-        @Bind(app.outlay.R.id.title)
-        TextView titleText;
-        @Bind(app.outlay.R.id.progressLayout)
-        ProgressLayout progressLayout;
-        @Bind(app.outlay.R.id.icon)
-        PrintView icon;
-        @Bind(app.outlay.R.id.reportContainer)
-        View reportContainer;
+        @BindView(app.outlay.R.id.amount)
+        protected TextView amountText;
+        @BindView(app.outlay.R.id.title)
+        protected TextView titleText;
+        @BindView(app.outlay.R.id.progressLayout)
+        protected ProgressLayout progressLayout;
+        @BindView(app.outlay.R.id.icon)
+        protected PrintView icon;
+        @BindView(app.outlay.R.id.reportContainer)
+        protected View reportContainer;
 
         public ReportViewHolder(View v) {
             super(v);
@@ -169,17 +169,17 @@ public class ReportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     public class ChartViewHolder extends RecyclerView.ViewHolder {
-        @Bind(app.outlay.R.id.chart)
-        PieChart chart;
+        @BindView(app.outlay.R.id.chart)
+        protected PieChart chart;
 
-        @Bind(app.outlay.R.id.hideLabels)
-        ImageView hideLabels;
+        @BindView(app.outlay.R.id.hideLabels)
+        protected ImageView hideLabels;
 
-        @Bind(app.outlay.R.id.previous)
-        ImageView prev;
+        @BindView(app.outlay.R.id.previous)
+        protected ImageView prev;
 
-        @Bind(app.outlay.R.id.next)
-        ImageView next;
+        @BindView(app.outlay.R.id.next)
+        protected ImageView next;
 
         public ChartViewHolder(View v) {
             super(v);

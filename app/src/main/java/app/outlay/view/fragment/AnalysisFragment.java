@@ -43,35 +43,34 @@ import app.outlay.utils.IconUtils;
 import app.outlay.view.autocomplete.CategoryAutoCompleteAdapter;
 import app.outlay.view.dialog.DatePickerFragment;
 import app.outlay.view.fragment.base.BaseMvpFragment;
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by bmelnychuk on 2/10/17.
  */
 
 public class AnalysisFragment extends BaseMvpFragment<AnalysisView, AnalysisPresenter> implements AnalysisView {
-    private static final int REF_TIMESTAMP = 1451660400;
 
-    @Bind(app.outlay.R.id.categoryTitle)
-    MaterialAutoCompleteTextView categoryTitle;
+    @BindView(app.outlay.R.id.categoryTitle)
+    protected MaterialAutoCompleteTextView categoryTitle;
 
-    @Bind(app.outlay.R.id.barChart)
-    BarChart barChart;
+    @BindView(app.outlay.R.id.barChart)
+    protected BarChart barChart;
 
-    @Bind(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    @BindView(app.outlay.R.id.toolbar)
+    protected Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.categoryIcon)
-    ImageView categoryIcon;
+    @BindView(app.outlay.R.id.categoryIcon)
+    protected ImageView categoryIcon;
 
-    @Bind(app.outlay.R.id.startDate)
-    EditText startDateEdit;
+    @BindView(app.outlay.R.id.startDate)
+    protected EditText startDateEdit;
 
-    @Bind(app.outlay.R.id.endDate)
-    EditText endDateEdit;
+    @BindView(app.outlay.R.id.endDate)
+    protected EditText endDateEdit;
 
     @Inject
-    AnalysisPresenter presenter;
+    protected AnalysisPresenter presenter;
 
     private CategoryAutoCompleteAdapter autoCompleteAdapter;
     private DayAxisValueFormatter dayAxisValueFormatter;

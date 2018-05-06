@@ -22,7 +22,7 @@ import app.outlay.domain.model.Expense;
 import app.outlay.utils.IconUtils;
 import app.outlay.utils.ResourceHelper;
 import app.outlay.view.adapter.ExpenseAdapter;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ca.barrenechea.widget.recyclerview.decoration.StickyHeaderAdapter;
 
@@ -102,7 +102,7 @@ public class TimelineExpensesAdapter extends RecyclerView.Adapter<TimelineExpens
     }
 
     public class ExpenseHeaderViewHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.date)
+        @BindView(R.id.date)
         TextView dateTextView;
 
         public ExpenseHeaderViewHolder(View v) {
@@ -112,20 +112,20 @@ public class TimelineExpensesAdapter extends RecyclerView.Adapter<TimelineExpens
     }
 
     public class ExpenseViewHolder extends RecyclerView.ViewHolder {
-        @Bind(app.outlay.R.id.icon)
-        ImageView icon;
+        @BindView(app.outlay.R.id.icon)
+        protected ImageView icon;
 
-        @Bind(app.outlay.R.id.amount)
-        TextView amount;
+        @BindView(app.outlay.R.id.amount)
+        protected TextView amount;
 
-        @Bind(app.outlay.R.id.title)
-        TextView title;
+        @BindView(app.outlay.R.id.title)
+        protected TextView title;
 
-        @Bind(app.outlay.R.id.note)
-        TextView note;
+        @BindView(app.outlay.R.id.note)
+        protected TextView note;
 
-        @Bind(app.outlay.R.id.container)
-        View container;
+        @BindView(app.outlay.R.id.container)
+        protected View container;
 
         public ExpenseViewHolder(View v) {
             super(v);

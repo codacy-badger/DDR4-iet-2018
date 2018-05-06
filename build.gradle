@@ -3,7 +3,7 @@
 ext {
     configuration = [
             package             : "app.outlay",
-            buildToolsVersion   : "25.0.3",
+            buildToolsVersion   : "27.0.3",
             compileVersion      : 25,
             minSdk              : 21,
             targetSdk           : 25,
@@ -29,9 +29,13 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.1.2'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         classpath 'me.tatarka:gradle-retrolambda:3.4.0'
         classpath 'com.google.gms:google-services:3.0.0'
@@ -47,6 +51,10 @@ allprojects {
         maven { url "https://jitpack.io" }
         maven { url "https://maven.google.com" }
         maven { url  "http://dl.bintray.com/dasar/maven" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 }
 

@@ -19,7 +19,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.math.BigDecimal;
@@ -40,56 +39,54 @@ import app.outlay.mvp.view.EnterExpenseView;
 import app.outlay.view.Navigator;
 import app.outlay.view.activity.base.DrawerActivity;
 import app.outlay.view.adapter.CategoriesGridAdapter;
-import app.outlay.view.adapter.ExpenseAdapter;
 import app.outlay.view.alert.Alert;
 import app.outlay.view.dialog.DatePickerFragment;
 import app.outlay.view.fragment.base.BaseMvpFragment;
 import app.outlay.view.numpad.NumpadEditable;
 import app.outlay.view.numpad.SimpleNumpadValidator;
 import app.outlay.view.timeline.TimelineExpensesAdapter;
-import butterknife.Bind;
+import butterknife.BindView;
 import ca.barrenechea.widget.recyclerview.decoration.StickyHeaderDecoration;
 
 public class MainFragment extends BaseMvpFragment<EnterExpenseView, EnterExpensePresenter>
         implements EnterExpenseView {
-    @Bind(app.outlay.R.id.chartIcon)
-    ImageView chartIcon;
+    @BindView(app.outlay.R.id.chartIcon)
+    protected ImageView chartIcon;
 
-    @Bind(app.outlay.R.id.drawerIcon)
-    ImageView drawerIcon;
+    @BindView(app.outlay.R.id.drawerIcon)
+    protected ImageView drawerIcon;
 
-    @Bind(R.id.bottomSheet)
-    View bottomSheet;
+    @BindView(R.id.bottomSheet)
+    protected View bottomSheet;
 
-    @Bind(app.outlay.R.id.categoriesGrid)
-    RecyclerView categoriesGrid;
+    @BindView(app.outlay.R.id.categoriesGrid)
+    protected RecyclerView categoriesGrid;
 
-    @Bind(R.id.timelineRecycler)
-    RecyclerView timelineRecycler;
+    @BindView(R.id.timelineRecycler)
+    protected RecyclerView timelineRecycler;
 
-    @Bind(app.outlay.R.id.amountEditable)
-    EditText amountText;
+    @BindView(app.outlay.R.id.amountEditable)
+    protected EditText amountText;
 
-    @Bind(app.outlay.R.id.addCategory)
-    Button addCategory;
+    @BindView(app.outlay.R.id.addCategory)
+    protected Button addCategory;
 
-    @Bind(app.outlay.R.id.dateLabel)
-    TextView dateLabel;
+    @BindView(app.outlay.R.id.dateLabel)
+    protected TextView dateLabel;
 
-    @Bind(R.id.expenseNote)
-    EditText expenseNote;
+    @BindView(R.id.expenseNote)
+    protected EditText expenseNote;
 
-    @Bind(R.id.bottomSheetToolbar)
-    Toolbar bottomSheetToolbar;
-
-    @Inject
-    EnterExpensePresenter presenter;
+    @BindView(R.id.bottomSheetToolbar)
+    protected Toolbar bottomSheetToolbar;
 
     @Inject
-    User currentUser;
+    protected EnterExpensePresenter presenter;
+
+    @Inject
+    protected User currentUser;
 
     private BottomSheetBehavior bottomSheetBehavior;
-    private StickyHeaderDecoration decor;
     private TimelineExpensesAdapter expensesAdapter;
     private CategoriesGridAdapter adapter;
     private Date selectedDate = new Date();
@@ -193,7 +190,7 @@ public class MainFragment extends BaseMvpFragment<EnterExpenseView, EnterExpense
 
         expensesAdapter = new TimelineExpensesAdapter();
         expensesAdapter.setOnExpenseClickListener(e -> Navigator.goToExpenseDetails(getActivity(), e, true));
-        decor = new StickyHeaderDecoration(expensesAdapter);
+        StickyHeaderDecoration decor = new StickyHeaderDecoration(expensesAdapter);
         LinearLayoutManager stickyHeaderLayoutManager = new LinearLayoutManager(getActivity());
         timelineRecycler.setLayoutManager(stickyHeaderLayoutManager);
         timelineRecycler.setAdapter(expensesAdapter);

@@ -13,7 +13,7 @@ import app.outlay.core.utils.NumberUtils;
 import app.outlay.domain.model.Expense;
 import app.outlay.utils.IconUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -45,23 +45,23 @@ public class GridExpensesAdapter extends ExpenseAdapter<GridExpensesAdapter.Expe
     }
 
     public class ExpenseGridItemViewHolder extends RecyclerView.ViewHolder {
-        @Bind(app.outlay.R.id.categoryNote)
-        TextView note;
+        @BindView(app.outlay.R.id.categoryNote)
+        protected TextView note;
 
-        @Bind(app.outlay.R.id.expenseContainer)
-        View root;
+        @BindView(app.outlay.R.id.expenseContainer)
+        protected View root;
 
-        @Bind(app.outlay.R.id.categoryIcon)
-        PrintView categoryIcon;
+        @BindView(app.outlay.R.id.categoryIcon)
+        protected PrintView categoryIcon;
 
-        @Bind(app.outlay.R.id.categoryTitle)
-        TextView categoryTitle;
+        @BindView(app.outlay.R.id.categoryTitle)
+        protected TextView categoryTitle;
 
-        @Bind(app.outlay.R.id.categoryDate)
-        TextView categoryDate;
+        @BindView(app.outlay.R.id.categoryDate)
+        protected TextView categoryDate;
 
-        @Bind(app.outlay.R.id.categoryAmount)
-        TextView categoryAmount;
+        @BindView(app.outlay.R.id.categoryAmount)
+        protected TextView categoryAmount;
 
         public ExpenseGridItemViewHolder(View v) {
             super(v);

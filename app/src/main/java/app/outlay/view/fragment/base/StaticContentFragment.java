@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import app.outlay.App;
 import app.outlay.analytics.Analytics;
@@ -42,6 +43,9 @@ public class StaticContentFragment extends Fragment implements BaseFragment {
         switch (item.getItemId()) {
             case android.R.id.home:
                 getActivity().onBackPressed();
+                break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import app.outlay.domain.model.Category;
 import app.outlay.mvp.presenter.CategoryDetailsPresenter;
@@ -28,7 +29,7 @@ import java.util.Random;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import uz.shift.colorpicker.LineColorPicker;
 
 /**
@@ -37,23 +38,23 @@ import uz.shift.colorpicker.LineColorPicker;
 public class CategoryDetailsFragment extends BaseMvpFragment<CategoryDetailsView, CategoryDetailsPresenter> implements CategoryDetailsView {
     public static final String ARG_CATEGORY_PARAM = "_argCategoryId";
 
-    @Bind(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    @BindView(app.outlay.R.id.toolbar)
+    protected Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.iconsGrid)
-    RecyclerView iconsGrid;
+    @BindView(app.outlay.R.id.iconsGrid)
+    protected RecyclerView iconsGrid;
 
-    @Bind(app.outlay.R.id.colorPicker)
-    LineColorPicker colorPicker;
+    @BindView(app.outlay.R.id.colorPicker)
+    protected LineColorPicker colorPicker;
 
-    @Bind(app.outlay.R.id.categoryName)
-    EditText categoryName;
+    @BindView(app.outlay.R.id.categoryName)
+    protected EditText categoryName;
 
-    @Bind(app.outlay.R.id.categoryInputLayout)
-    TextInputLayout categoryInputLayout;
+    @BindView(app.outlay.R.id.categoryInputLayout)
+    protected TextInputLayout categoryInputLayout;
 
     @Inject
-    CategoryDetailsPresenter presenter;
+    protected CategoryDetailsPresenter presenter;
 
     private IconsGridAdapter adapter;
     private Category category;
@@ -106,6 +107,9 @@ public class CategoryDetailsFragment extends BaseMvpFragment<CategoryDetailsView
                 category = getCategory();
                 analytics().trackCategoryDeleted(category);
                 presenter.deleteCategory(category);
+                break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);
