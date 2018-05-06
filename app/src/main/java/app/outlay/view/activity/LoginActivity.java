@@ -6,7 +6,6 @@ import app.outlay.view.activity.base.ParentActivity;
 import app.outlay.view.fragment.LoginFragment;
 
 public class LoginActivity extends ParentActivity {
-    private LoginFragment loginFragment;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -16,7 +15,7 @@ public class LoginActivity extends ParentActivity {
     }
 
     private void initializeActivity() {
-        loginFragment = new LoginFragment();
+        LoginFragment loginFragment = new LoginFragment();
         loginFragment.setArguments(getIntent().getExtras());
         addFragment(app.outlay.R.id.fragment, loginFragment);
     }
