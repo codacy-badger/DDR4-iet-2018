@@ -38,17 +38,6 @@ android {
         props.load(new FileInputStream(propsFile))
     }
 
-    signingConfigs {
-        config {
-            keyAlias 'keystore'
-            keyPassword 'iet2018ddr4'
-            storeFile file('C:/Users/Paksi Péter/.android/keystores/keystore.jks')
-            storePassword 'iet2018ddr4'
-        }
-        config1 {
-        }
-    }
-
     buildTypes {
         debug {
             buildConfigField "boolean", "USE_ANALYTICS", "false"
@@ -58,7 +47,6 @@ android {
         }
         release {
             buildConfigField "boolean", "USE_ANALYTICS", "true"
-            signingConfig signingConfigs.config
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
