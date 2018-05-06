@@ -12,15 +12,6 @@ import android.widget.LinearLayout;
  * Created by Bogdan Melnychuk on 1/15/16.
  */
 public class NumpadView extends LinearLayout implements View.OnClickListener {
-    public interface NumpadClickListener {
-        boolean onNumberClicked(int value);
-
-        boolean onClearClicked();
-
-        boolean onDecimalClicked();
-
-        boolean onClearLongClicked();
-    }
 
     private NumpadClickListener numpadClickListener;
     private NumpadEditable attachedEditable;
@@ -179,5 +170,15 @@ public class NumpadView extends LinearLayout implements View.OnClickListener {
         } else {
             attachedEditable.setText(str);
         }
+    }
+
+    public interface NumpadClickListener {
+        boolean onNumberClicked(int value);
+
+        boolean onClearClicked();
+
+        boolean onDecimalClicked();
+
+        boolean onClearLongClicked();
     }
 }
