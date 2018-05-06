@@ -45,28 +45,28 @@ public class ExpensesListFragment extends BaseMvpFragment<ExpensesView, Expenses
     private static final int MODE_GRID = 1;
 
     @Bind(app.outlay.R.id.recyclerView)
-    RecyclerView recyclerView;
+    protected RecyclerView recyclerView;
 
     @Bind(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    protected Toolbar toolbar;
 
     @Bind(app.outlay.R.id.fab)
-    FloatingActionButton fab;
+    protected FloatingActionButton fab;
 
     @Bind(app.outlay.R.id.noResults)
-    View noResults;
+    protected View noResults;
 
     @Bind(app.outlay.R.id.filterCategoryIcon)
-    PrintView filterCategoryIcon;
+    protected PrintView filterCategoryIcon;
 
     @Bind(app.outlay.R.id.filterCategoryName)
-    TextView filterCategoryName;
+    protected TextView filterCategoryName;
 
     @Bind(app.outlay.R.id.filterDateLabel)
-    TextView filterDateLabel;
+    protected TextView filterDateLabel;
 
     @Inject
-    ExpensesListPresenter presenter;
+    protected ExpensesListPresenter presenter;
 
     private ExpenseAdapter adapter;
     private Date dateFrom;
