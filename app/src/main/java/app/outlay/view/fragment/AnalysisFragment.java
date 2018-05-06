@@ -53,25 +53,25 @@ public class AnalysisFragment extends BaseMvpFragment<AnalysisView, AnalysisPres
     private static final int REF_TIMESTAMP = 1451660400;
 
     @Bind(app.outlay.R.id.categoryTitle)
-    MaterialAutoCompleteTextView categoryTitle;
+    protected MaterialAutoCompleteTextView categoryTitle;
 
     @Bind(app.outlay.R.id.barChart)
-    BarChart barChart;
+    protected BarChart barChart;
 
     @Bind(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    protected Toolbar toolbar;
 
     @Bind(app.outlay.R.id.categoryIcon)
-    ImageView categoryIcon;
+    protected ImageView categoryIcon;
 
     @Bind(app.outlay.R.id.startDate)
-    EditText startDateEdit;
+    protected EditText startDateEdit;
 
     @Bind(app.outlay.R.id.endDate)
-    EditText endDateEdit;
+    protected EditText endDateEdit;
 
     @Inject
-    AnalysisPresenter presenter;
+    protected AnalysisPresenter presenter;
 
     private CategoryAutoCompleteAdapter autoCompleteAdapter;
     private DayAxisValueFormatter dayAxisValueFormatter;

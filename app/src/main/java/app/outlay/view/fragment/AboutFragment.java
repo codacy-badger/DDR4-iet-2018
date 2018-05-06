@@ -23,13 +23,13 @@ import butterknife.ButterKnife;
 public class AboutFragment extends StaticContentFragment {
 
     @Bind(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    protected Toolbar toolbar;
 
     @Bind(app.outlay.R.id.githubContainer)
-    View githubContainer;
+    protected View githubContainer;
 
     @Bind(app.outlay.R.id.aboutText)
-    TextView aboutText;
+    protected TextView aboutText;
 
     @Nullable
     @Override

@@ -57,22 +57,22 @@ public class ListExpensesAdapter extends ExpenseAdapter<ListExpensesAdapter.Expe
 
     public class ExpenseListItemViewHolder extends RecyclerView.ViewHolder {
         @Bind(app.outlay.R.id.icon)
-        ImageView icon;
+        protected ImageView icon;
 
         @Bind(app.outlay.R.id.amount)
-        TextView amount;
+        protected TextView amount;
 
         @Bind(app.outlay.R.id.date)
-        TextView date;
+        protected TextView date;
 
         @Bind(app.outlay.R.id.title)
-        TextView title;
+        protected TextView title;
 
         @Bind(app.outlay.R.id.note)
-        TextView note;
+        protected TextView note;
 
         @Bind(app.outlay.R.id.container)
-        View container;
+        protected View container;
 
         public ExpenseListItemViewHolder(View v) {
             super(v);
