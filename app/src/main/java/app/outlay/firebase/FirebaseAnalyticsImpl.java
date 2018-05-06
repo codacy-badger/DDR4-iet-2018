@@ -181,6 +181,9 @@ public class FirebaseAnalyticsImpl implements Analytics {
             case AppPreferences.THEME_LIGHT:
                 trackEvent("theme_light_used", null);
                 break;
+            default:
+                trackEvent("theme_dark_used", null);
+                break;
         }
     }
 

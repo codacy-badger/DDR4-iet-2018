@@ -42,6 +42,10 @@ public class ReportPresenter extends MvpBasePresenter<StatisticView> {
                 startDate = DateUtils.getMonthStart(date);
                 endDate = DateUtils.getMonthEnd(date);
                 break;
+            default:
+                startDate = DateUtils.getDayStart(date);
+                endDate = DateUtils.getDayEnd(date);
+                break;
         }
 
 
