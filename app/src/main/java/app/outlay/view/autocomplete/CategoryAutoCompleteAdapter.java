@@ -75,8 +75,8 @@ public class CategoryAutoCompleteAdapter extends BaseAdapter implements Filterab
     }
 
     class ViewHolder {
-        TextView categoryTitle;
-        PrintView categoryIcon;
+        public TextView categoryTitle;
+        public PrintView categoryIcon;
     }
 
     @Override
@@ -84,7 +84,7 @@ public class CategoryAutoCompleteAdapter extends BaseAdapter implements Filterab
         return nameFilter;
     }
 
-    Filter nameFilter = new Filter() {
+    private Filter nameFilter = new Filter() {
         @Override
         public CharSequence convertResultToString(Object resultValue) {
             String str = ((Category) resultValue).getTitle();

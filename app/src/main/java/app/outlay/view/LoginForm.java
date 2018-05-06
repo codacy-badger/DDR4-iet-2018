@@ -234,12 +234,12 @@ public class LoginForm extends RelativeLayout {
         void onPasswordForget();
     }
 
-    boolean isEmailValid(CharSequence email) {
+    protected boolean isEmailValid(CharSequence email) {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
     private static class ClearErrorTextWatcher extends TextWatcherAdapter {
-        TextInputLayout inputLayout;
+        private TextInputLayout inputLayout;
 
         public ClearErrorTextWatcher(TextInputLayout inputLayout) {
             this.inputLayout = inputLayout;
