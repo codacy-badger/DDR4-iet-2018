@@ -6,7 +6,6 @@ import app.outlay.view.activity.base.ParentActivity;
 import app.outlay.view.fragment.SyncGuestFragment;
 
 public class SyncGuestActivity extends ParentActivity {
-    private SyncGuestFragment syncGuestFragment;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -16,7 +15,7 @@ public class SyncGuestActivity extends ParentActivity {
     }
 
     private void initializeActivity() {
-        syncGuestFragment = new SyncGuestFragment();
+        SyncGuestFragment syncGuestFragment = new SyncGuestFragment();
         syncGuestFragment.setArguments(getIntent().getExtras());
         addFragment(app.outlay.R.id.fragment, syncGuestFragment);
     }
