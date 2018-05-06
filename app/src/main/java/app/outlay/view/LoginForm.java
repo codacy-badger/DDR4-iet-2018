@@ -34,40 +34,40 @@ public class LoginForm extends RelativeLayout {
     public static final int MODE_SIGN_UP = 1;
 
     @BindView(app.outlay.R.id.signInForm)
-    View signInForm;
+    protected View signInForm;
 
     @BindView(app.outlay.R.id.signUpForm)
-    View signUpForm;
+    protected View signUpForm;
 
     @BindView(app.outlay.R.id.fab)
-    FloatingActionButton fab;
+    protected FloatingActionButton fab;
 
     @BindView(app.outlay.R.id.signUpButton)
-    Button signUpButton;
+    protected Button signUpButton;
 
     @BindView(app.outlay.R.id.signInButton)
-    Button signInButton;
+    protected Button signInButton;
 
     @BindView(app.outlay.R.id.forgetPassword)
-    Button forgetPassword;
+    protected Button forgetPassword;
 
     @BindView(app.outlay.R.id.skipButton)
-    Button skipButton;
+    protected Button skipButton;
 
     @BindView(app.outlay.R.id.signInInputEmail)
-    TextInputLayout signInEmail;
+    protected TextInputLayout signInEmail;
 
     @BindView(app.outlay.R.id.signInInputPassword)
-    TextInputLayout signInPassword;
+    protected TextInputLayout signInPassword;
 
     @BindView(app.outlay.R.id.signUpInputEmail)
-    TextInputLayout signUpEmail;
+    protected TextInputLayout signUpEmail;
 
     @BindView(app.outlay.R.id.signUpInputPassword)
-    TextInputLayout signUpPassword;
+    protected TextInputLayout signUpPassword;
 
     @BindView(app.outlay.R.id.signUpInputRepeatPassword)
-    TextInputLayout signUpRepeatPassword;
+    protected TextInputLayout signUpRepeatPassword;
 
     private OnSubmitClickListener signInListener;
     private OnSubmitClickListener signUpListener;

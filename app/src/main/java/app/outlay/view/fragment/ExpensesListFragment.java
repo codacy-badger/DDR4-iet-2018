@@ -41,28 +41,28 @@ public class ExpensesListFragment extends BaseMvpFragment<ExpensesView, Expenses
     public static final String ARG_DATE_TO = "_argDateTo";
 
     @BindView(app.outlay.R.id.recyclerView)
-    RecyclerView recyclerView;
+    protected RecyclerView recyclerView;
 
     @BindView(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    protected Toolbar toolbar;
 
     @BindView(app.outlay.R.id.fab)
-    FloatingActionButton fab;
+    protected FloatingActionButton fab;
 
     @BindView(app.outlay.R.id.noResults)
-    View noResults;
+    protected View noResults;
 
     @BindView(app.outlay.R.id.filterCategoryIcon)
-    PrintView filterCategoryIcon;
+    protected PrintView filterCategoryIcon;
 
     @BindView(app.outlay.R.id.filterCategoryName)
-    TextView filterCategoryName;
+    protected TextView filterCategoryName;
 
     @BindView(app.outlay.R.id.filterDateLabel)
-    TextView filterDateLabel;
+    protected TextView filterDateLabel;
 
     @Inject
-    ExpensesListPresenter presenter;
+    protected ExpensesListPresenter presenter;
 
     private ExpenseAdapter adapter;
     private Date dateFrom;

@@ -51,37 +51,37 @@ import ca.barrenechea.widget.recyclerview.decoration.StickyHeaderDecoration;
 public class MainFragment extends BaseMvpFragment<EnterExpenseView, EnterExpensePresenter>
         implements EnterExpenseView {
     @BindView(app.outlay.R.id.chartIcon)
-    ImageView chartIcon;
+    protected ImageView chartIcon;
 
     @BindView(app.outlay.R.id.drawerIcon)
-    ImageView drawerIcon;
+    protected ImageView drawerIcon;
 
     @BindView(R.id.bottomSheet)
-    View bottomSheet;
+    protected View bottomSheet;
 
     @BindView(app.outlay.R.id.categoriesGrid)
-    RecyclerView categoriesGrid;
+    protected RecyclerView categoriesGrid;
 
     @BindView(R.id.timelineRecycler)
-    RecyclerView timelineRecycler;
+    protected RecyclerView timelineRecycler;
 
     @BindView(app.outlay.R.id.amountEditable)
-    EditText amountText;
+    protected EditText amountText;
 
     @BindView(app.outlay.R.id.addCategory)
-    Button addCategory;
+    protected Button addCategory;
 
     @BindView(app.outlay.R.id.dateLabel)
-    TextView dateLabel;
+    protected TextView dateLabel;
 
     @BindView(R.id.expenseNote)
-    EditText expenseNote;
+    protected EditText expenseNote;
 
     @BindView(R.id.bottomSheetToolbar)
-    Toolbar bottomSheetToolbar;
+    protected Toolbar bottomSheetToolbar;
 
     @Inject
-    EnterExpensePresenter presenter;
+    protected EnterExpensePresenter presenter;
 
     @Inject
     User currentUser;

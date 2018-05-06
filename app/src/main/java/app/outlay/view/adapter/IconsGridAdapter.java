@@ -93,10 +93,10 @@ public class IconsGridAdapter extends RecyclerView.Adapter<IconsGridAdapter.Cate
 
     public class CategoryViewHolder extends RecyclerView.ViewHolder {
         @BindView(app.outlay.R.id.categoryContainer)
-        View categoryContainer;
+        protected View categoryContainer;
 
         @BindView(app.outlay.R.id.categoryIcon)
-        PrintView categoryIcon;
+        protected PrintView categoryIcon;
 
         public CategoryViewHolder(View v) {
             super(v);
