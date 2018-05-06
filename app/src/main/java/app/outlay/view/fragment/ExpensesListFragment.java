@@ -40,8 +40,6 @@ public class ExpensesListFragment extends BaseMvpFragment<ExpensesView, Expenses
     public static final String ARG_DATE_FROM = "_argDateFrom";
     public static final String ARG_DATE_TO = "_argDateTo";
 
-    private static final int MODE_LIST = 0;
-
     @Bind(app.outlay.R.id.recyclerView)
     RecyclerView recyclerView;
 

@@ -7,7 +7,6 @@ import javax.inject.Inject;
 import app.outlay.core.executor.PostExecutionThread;
 import app.outlay.core.executor.ThreadExecutor;
 import app.outlay.domain.model.Report;
-import app.outlay.domain.repository.CategoryRepository;
 import app.outlay.domain.repository.ExpenseRepository;
 import rx.Observable;
 
@@ -22,8 +21,7 @@ public class GetExpensesUseCase extends UseCase<GetExpensesUseCase.Input, Report
     public GetExpensesUseCase(
             ThreadExecutor threadExecutor,
             PostExecutionThread postExecutionThread,
-            ExpenseRepository expenseRepository,
-            CategoryRepository categoryRepository
+            ExpenseRepository expenseRepository
     ) {
         super(threadExecutor, postExecutionThread);
         this.expenseRepository = expenseRepository;
