@@ -22,7 +22,7 @@ import app.outlay.view.helper.AnimationUtils;
 import app.outlay.view.helper.TextWatcherAdapter;
 import app.outlay.view.helper.ViewHelper;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -33,40 +33,40 @@ public class LoginForm extends RelativeLayout {
     public static final int MODE_SIGN_IN = 0;
     public static final int MODE_SIGN_UP = 1;
 
-    @Bind(app.outlay.R.id.signInForm)
+    @BindView(app.outlay.R.id.signInForm)
     View signInForm;
 
-    @Bind(app.outlay.R.id.signUpForm)
+    @BindView(app.outlay.R.id.signUpForm)
     View signUpForm;
 
-    @Bind(app.outlay.R.id.fab)
+    @BindView(app.outlay.R.id.fab)
     FloatingActionButton fab;
 
-    @Bind(app.outlay.R.id.signUpButton)
+    @BindView(app.outlay.R.id.signUpButton)
     Button signUpButton;
 
-    @Bind(app.outlay.R.id.signInButton)
+    @BindView(app.outlay.R.id.signInButton)
     Button signInButton;
 
-    @Bind(app.outlay.R.id.forgetPassword)
+    @BindView(app.outlay.R.id.forgetPassword)
     Button forgetPassword;
 
-    @Bind(app.outlay.R.id.skipButton)
+    @BindView(app.outlay.R.id.skipButton)
     Button skipButton;
 
-    @Bind(app.outlay.R.id.signInInputEmail)
+    @BindView(app.outlay.R.id.signInInputEmail)
     TextInputLayout signInEmail;
 
-    @Bind(app.outlay.R.id.signInInputPassword)
+    @BindView(app.outlay.R.id.signInInputPassword)
     TextInputLayout signInPassword;
 
-    @Bind(app.outlay.R.id.signUpInputEmail)
+    @BindView(app.outlay.R.id.signUpInputEmail)
     TextInputLayout signUpEmail;
 
-    @Bind(app.outlay.R.id.signUpInputPassword)
+    @BindView(app.outlay.R.id.signUpInputPassword)
     TextInputLayout signUpPassword;
 
-    @Bind(app.outlay.R.id.signUpInputRepeatPassword)
+    @BindView(app.outlay.R.id.signUpInputRepeatPassword)
     TextInputLayout signUpRepeatPassword;
 
     private OnSubmitClickListener signInListener;

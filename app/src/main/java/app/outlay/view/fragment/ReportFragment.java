@@ -29,7 +29,7 @@ import java.util.Date;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by Bogdan Melnychuk on 1/20/16.
@@ -41,16 +41,16 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
     public static final int PERIOD_WEEK = 1;
     public static final int PERIOD_MONTH = 2;
 
-    @Bind(app.outlay.R.id.recyclerView)
+    @BindView(app.outlay.R.id.recyclerView)
     protected RecyclerView recyclerView;
 
-    @Bind(app.outlay.R.id.tabs)
+    @BindView(app.outlay.R.id.tabs)
     protected TabLayout tabLayout;
 
-    @Bind(app.outlay.R.id.toolbar)
+    @BindView(app.outlay.R.id.toolbar)
     protected Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.noResults)
+    @BindView(app.outlay.R.id.noResults)
     protected View noResults;
 
     @Inject

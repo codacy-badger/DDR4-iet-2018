@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import app.outlay.view.fragment.base.StaticContentFragment;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -22,13 +22,13 @@ import butterknife.ButterKnife;
  */
 public class AboutFragment extends StaticContentFragment {
 
-    @Bind(app.outlay.R.id.toolbar)
+    @BindView(app.outlay.R.id.toolbar)
     protected Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.githubContainer)
+    @BindView(app.outlay.R.id.githubContainer)
     protected View githubContainer;
 
-    @Bind(app.outlay.R.id.aboutText)
+    @BindView(app.outlay.R.id.aboutText)
     protected TextView aboutText;
 
     @Nullable

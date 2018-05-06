@@ -29,7 +29,7 @@ import app.outlay.view.progress.ProgressLayout;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -151,15 +151,15 @@ public class ReportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     public class ReportViewHolder extends RecyclerView.ViewHolder {
-        @Bind(app.outlay.R.id.amount)
+        @BindView(app.outlay.R.id.amount)
         protected TextView amountText;
-        @Bind(app.outlay.R.id.title)
+        @BindView(app.outlay.R.id.title)
         protected TextView titleText;
-        @Bind(app.outlay.R.id.progressLayout)
+        @BindView(app.outlay.R.id.progressLayout)
         protected ProgressLayout progressLayout;
-        @Bind(app.outlay.R.id.icon)
+        @BindView(app.outlay.R.id.icon)
         protected PrintView icon;
-        @Bind(app.outlay.R.id.reportContainer)
+        @BindView(app.outlay.R.id.reportContainer)
         protected View reportContainer;
 
         public ReportViewHolder(View v) {
@@ -169,16 +169,16 @@ public class ReportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     public class ChartViewHolder extends RecyclerView.ViewHolder {
-        @Bind(app.outlay.R.id.chart)
+        @BindView(app.outlay.R.id.chart)
         protected PieChart chart;
 
-        @Bind(app.outlay.R.id.hideLabels)
+        @BindView(app.outlay.R.id.hideLabels)
         protected ImageView hideLabels;
 
-        @Bind(app.outlay.R.id.previous)
+        @BindView(app.outlay.R.id.previous)
         protected ImageView prev;
 
-        @Bind(app.outlay.R.id.next)
+        @BindView(app.outlay.R.id.next)
         protected ImageView next;
 
         public ChartViewHolder(View v) {

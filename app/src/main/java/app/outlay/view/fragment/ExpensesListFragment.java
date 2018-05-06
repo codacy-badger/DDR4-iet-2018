@@ -31,7 +31,7 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by Bogdan Melnychuk on 1/20/16.
@@ -44,25 +44,25 @@ public class ExpensesListFragment extends BaseMvpFragment<ExpensesView, Expenses
     private static final int MODE_LIST = 0;
     private static final int MODE_GRID = 1;
 
-    @Bind(app.outlay.R.id.recyclerView)
+    @BindView(app.outlay.R.id.recyclerView)
     protected RecyclerView recyclerView;
 
-    @Bind(app.outlay.R.id.toolbar)
+    @BindView(app.outlay.R.id.toolbar)
     protected Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.fab)
+    @BindView(app.outlay.R.id.fab)
     protected FloatingActionButton fab;
 
-    @Bind(app.outlay.R.id.noResults)
+    @BindView(app.outlay.R.id.noResults)
     protected View noResults;
 
-    @Bind(app.outlay.R.id.filterCategoryIcon)
+    @BindView(app.outlay.R.id.filterCategoryIcon)
     protected PrintView filterCategoryIcon;
 
-    @Bind(app.outlay.R.id.filterCategoryName)
+    @BindView(app.outlay.R.id.filterCategoryName)
     protected TextView filterCategoryName;
 
-    @Bind(app.outlay.R.id.filterDateLabel)
+    @BindView(app.outlay.R.id.filterDateLabel)
     protected TextView filterDateLabel;
 
     @Inject

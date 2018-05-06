@@ -20,7 +20,7 @@ import app.outlay.view.adapter.listener.OnCategoryClickListener;
 import app.outlay.view.helper.itemtouch.ItemTouchHelperAdapter;
 import app.outlay.view.helper.itemtouch.ItemTouchHelperViewHolder;
 import app.outlay.view.helper.itemtouch.OnDragListener;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -109,13 +109,13 @@ public class CategoriesDraggableGridAdapter extends RecyclerView.Adapter<Categor
     public class CategoryDraggableViewHolder extends RecyclerView.ViewHolder implements
             ItemTouchHelperViewHolder {
 
-        @Bind(app.outlay.R.id.categoryContainer)
+        @BindView(app.outlay.R.id.categoryContainer)
         protected View categoryContainer;
 
-        @Bind(app.outlay.R.id.categoryIcon)
+        @BindView(app.outlay.R.id.categoryIcon)
         protected ImageView categoryIcon;
 
-        @Bind(app.outlay.R.id.categoryTitle)
+        @BindView(app.outlay.R.id.categoryTitle)
         protected TextView categoryTitle;
 
         public CategoryDraggableViewHolder(View v) {

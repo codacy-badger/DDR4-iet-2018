@@ -30,7 +30,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -38,19 +38,19 @@ import butterknife.ButterKnife;
  */
 public class CategoriesFragment extends BaseMvpFragment<CategoriesView, CategoriesPresenter> implements OnDragListener, CategoriesView {
 
-    @Bind(app.outlay.R.id.toolbar)
+    @BindView(app.outlay.R.id.toolbar)
     protected Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.categoriesGrid)
+    @BindView(app.outlay.R.id.categoriesGrid)
     protected RecyclerView categoriesGrid;
 
-    @Bind(app.outlay.R.id.noContent)
+    @BindView(app.outlay.R.id.noContent)
     protected View noContent;
 
-    @Bind(app.outlay.R.id.noContentImage)
+    @BindView(app.outlay.R.id.noContentImage)
     protected ImageView noContentImage;
 
-    @Bind(app.outlay.R.id.fab)
+    @BindView(app.outlay.R.id.fab)
     protected FloatingActionButton fab;
 
     @Inject
