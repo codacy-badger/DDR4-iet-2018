@@ -87,7 +87,6 @@ public class MainFragment extends BaseMvpFragment<EnterExpenseView, EnterExpense
     User currentUser;
 
     private BottomSheetBehavior bottomSheetBehavior;
-    private StickyHeaderDecoration decor;
     private TimelineExpensesAdapter expensesAdapter;
     private CategoriesGridAdapter adapter;
     private Date selectedDate = new Date();
@@ -191,7 +190,7 @@ public class MainFragment extends BaseMvpFragment<EnterExpenseView, EnterExpense
 
         expensesAdapter = new TimelineExpensesAdapter();
         expensesAdapter.setOnExpenseClickListener(e -> Navigator.goToExpenseDetails(getActivity(), e, true));
-        decor = new StickyHeaderDecoration(expensesAdapter);
+        StickyHeaderDecoration decor = new StickyHeaderDecoration(expensesAdapter);
         LinearLayoutManager stickyHeaderLayoutManager = new LinearLayoutManager(getActivity());
         timelineRecycler.setLayoutManager(stickyHeaderLayoutManager);
         timelineRecycler.setAdapter(expensesAdapter);
