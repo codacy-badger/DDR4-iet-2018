@@ -3,6 +3,7 @@ package app.outlay.view.activity.base;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.TextUtils;
+import android.widget.Toast;
 
 import com.mikepenz.material_design_iconic_typeface_library.MaterialDesignIconic;
 import com.mikepenz.materialdrawer.AccountHeader;
@@ -111,6 +112,9 @@ public abstract class DrawerActivity extends ParentActivity {
                                 break;
                             case ITEM_CREATE_USER:
                                 createUser();
+                                break;
+                            default:
+                                Toast.makeText(this, "Not valid option", Toast.LENGTH_SHORT).show();
                                 break;
                         }
 

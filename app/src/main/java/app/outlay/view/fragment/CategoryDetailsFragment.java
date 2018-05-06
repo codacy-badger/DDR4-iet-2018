@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import app.outlay.domain.model.Category;
 import app.outlay.mvp.presenter.CategoryDetailsPresenter;
@@ -106,6 +107,9 @@ public class CategoryDetailsFragment extends BaseMvpFragment<CategoryDetailsView
                 category = getCategory();
                 analytics().trackCategoryDeleted(category);
                 presenter.deleteCategory(category);
+                break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

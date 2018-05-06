@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.mikepenz.material_design_iconic_typeface_library.MaterialDesignIconic;
 
@@ -143,6 +144,9 @@ public class ExpensesDetailsFragment extends BaseMvpFragment<ExpenseDetailsView,
                 analytics().trackExpenseDeleted(expense);
                 presenter.deleteExpense(expense);
                 getActivity().onBackPressed();
+                break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

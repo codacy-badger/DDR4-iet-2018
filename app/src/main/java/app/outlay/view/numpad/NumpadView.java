@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 /**
  * Created by Bogdan Melnychuk on 1/15/16.
@@ -127,6 +128,9 @@ public class NumpadView extends LinearLayout implements View.OnClickListener {
                 break;
             case app.outlay.R.id.btnDecimal:
                 onDecimalCLicked();
+                break;
+            default:
+                Toast.makeText(getContext(), "Not valid option", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

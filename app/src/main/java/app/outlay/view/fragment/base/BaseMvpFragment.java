@@ -49,6 +49,9 @@ public abstract class BaseMvpFragment<V extends MvpView, P extends MvpPresenter<
             case android.R.id.home:
                 getActivity().onBackPressed();
                 break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
