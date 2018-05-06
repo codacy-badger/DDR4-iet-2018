@@ -152,15 +152,15 @@ public class ReportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     public class ReportViewHolder extends RecyclerView.ViewHolder {
         @BindView(app.outlay.R.id.amount)
-        protected TextView amountText;
+        TextView amountText;
         @BindView(app.outlay.R.id.title)
-        protected TextView titleText;
+        TextView titleText;
         @BindView(app.outlay.R.id.progressLayout)
-        protected ProgressLayout progressLayout;
+        ProgressLayout progressLayout;
         @BindView(app.outlay.R.id.icon)
-        protected PrintView icon;
+        PrintView icon;
         @BindView(app.outlay.R.id.reportContainer)
-        protected View reportContainer;
+        View reportContainer;
 
         public ReportViewHolder(View v) {
             super(v);
@@ -170,16 +170,16 @@ public class ReportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     public class ChartViewHolder extends RecyclerView.ViewHolder {
         @BindView(app.outlay.R.id.chart)
-        protected PieChart chart;
+        PieChart chart;
 
         @BindView(app.outlay.R.id.hideLabels)
-        protected ImageView hideLabels;
+        ImageView hideLabels;
 
         @BindView(app.outlay.R.id.previous)
-        protected ImageView prev;
+        ImageView prev;
 
         @BindView(app.outlay.R.id.next)
-        protected ImageView next;
+        ImageView next;
 
         public ChartViewHolder(View v) {
             super(v);

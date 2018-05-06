@@ -1,10 +1,5 @@
 package app.outlay.data.repository;
 
-import app.outlay.core.utils.TextUtils;
-import app.outlay.data.source.CategoryDataSource;
-import app.outlay.domain.model.Category;
-import app.outlay.domain.repository.CategoryRepository;
-
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -12,6 +7,10 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
+import app.outlay.core.utils.TextUtils;
+import app.outlay.data.source.CategoryDataSource;
+import app.outlay.domain.model.Category;
+import app.outlay.domain.repository.CategoryRepository;
 import rx.Observable;
 
 /**
@@ -19,7 +18,6 @@ import rx.Observable;
  */
 
 public class CategoryRepositoryImpl implements CategoryRepository {
-    private CategoryDataSource databaseSource;
     private CategoryDataSource firebaseSource;
 
     private Map<String, Category> categoryMap;

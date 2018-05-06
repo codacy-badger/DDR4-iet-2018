@@ -110,13 +110,13 @@ public class CategoriesDraggableGridAdapter extends RecyclerView.Adapter<Categor
             ItemTouchHelperViewHolder {
 
         @BindView(app.outlay.R.id.categoryContainer)
-        protected View categoryContainer;
+        View categoryContainer;
 
         @BindView(app.outlay.R.id.categoryIcon)
-        protected ImageView categoryIcon;
+        ImageView categoryIcon;
 
         @BindView(app.outlay.R.id.categoryTitle)
-        protected TextView categoryTitle;
+        TextView categoryTitle;
 
         public CategoryDraggableViewHolder(View v) {
             super(v);

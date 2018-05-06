@@ -13,6 +13,12 @@ import android.widget.TextView;
 
 import com.github.johnkil.print.PrintView;
 
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import javax.inject.Inject;
+
 import app.outlay.core.utils.DateUtils;
 import app.outlay.domain.model.Category;
 import app.outlay.domain.model.Expense;
@@ -24,13 +30,6 @@ import app.outlay.view.Navigator;
 import app.outlay.view.adapter.ExpenseAdapter;
 import app.outlay.view.adapter.ListExpensesAdapter;
 import app.outlay.view.fragment.base.BaseMvpFragment;
-
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-
-import javax.inject.Inject;
-
 import butterknife.BindView;
 
 /**
@@ -41,39 +40,34 @@ public class ExpensesListFragment extends BaseMvpFragment<ExpensesView, Expenses
     public static final String ARG_DATE_FROM = "_argDateFrom";
     public static final String ARG_DATE_TO = "_argDateTo";
 
-    private static final int MODE_LIST = 0;
-    private static final int MODE_GRID = 1;
-
     @BindView(app.outlay.R.id.recyclerView)
-    protected RecyclerView recyclerView;
+    RecyclerView recyclerView;
 
     @BindView(app.outlay.R.id.toolbar)
-    protected Toolbar toolbar;
+    Toolbar toolbar;
 
     @BindView(app.outlay.R.id.fab)
-    protected FloatingActionButton fab;
+    FloatingActionButton fab;
 
     @BindView(app.outlay.R.id.noResults)
-    protected View noResults;
+    View noResults;
 
     @BindView(app.outlay.R.id.filterCategoryIcon)
-    protected PrintView filterCategoryIcon;
+    PrintView filterCategoryIcon;
 
     @BindView(app.outlay.R.id.filterCategoryName)
-    protected TextView filterCategoryName;
+    TextView filterCategoryName;
 
     @BindView(app.outlay.R.id.filterDateLabel)
-    protected TextView filterDateLabel;
+    TextView filterDateLabel;
 
     @Inject
-    protected ExpensesListPresenter presenter;
+    ExpensesListPresenter presenter;
 
     private ExpenseAdapter adapter;
     private Date dateFrom;
     private Date dateTo;
     private String categoryId;
-
-    private int mode = MODE_LIST;
 
     @Override
     public ExpensesListPresenter createPresenter() {

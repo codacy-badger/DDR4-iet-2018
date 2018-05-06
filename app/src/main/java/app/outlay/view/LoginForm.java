@@ -75,26 +75,26 @@ public class LoginForm extends RelativeLayout {
 
     public LoginForm(Context context) {
         super(context);
-        init(null);
+        init();
     }
 
     public LoginForm(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(attrs);
+        init();
     }
 
     public LoginForm(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(attrs);
+        init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public LoginForm(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init(attrs);
+        init();
     }
 
-    private void init(AttributeSet attrs) {
+    private void init() {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View parent = inflater.inflate(app.outlay.R.layout.view_login_form, this, true);
         ButterKnife.bind(this, parent);
@@ -218,11 +218,6 @@ public class LoginForm extends RelativeLayout {
 
     public void setToggleModeButtonVisible(boolean visible) {
         fab.setVisibility(visible ? VISIBLE : GONE);
-    }
-
-    private void toggleViewVisibility(View view) {
-        boolean visible = view.getVisibility() == View.VISIBLE;
-        view.setVisibility(visible ? View.INVISIBLE : View.VISIBLE);
     }
 
     private Point getViewCenter() {

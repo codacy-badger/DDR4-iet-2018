@@ -12,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import app.outlay.core.utils.DateUtils;
 import app.outlay.domain.model.Report;
@@ -42,19 +43,19 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
     public static final int PERIOD_MONTH = 2;
 
     @BindView(app.outlay.R.id.recyclerView)
-    protected RecyclerView recyclerView;
+    RecyclerView recyclerView;
 
     @BindView(app.outlay.R.id.tabs)
-    protected TabLayout tabLayout;
+    TabLayout tabLayout;
 
     @BindView(app.outlay.R.id.toolbar)
-    protected Toolbar toolbar;
+    Toolbar toolbar;
 
     @BindView(app.outlay.R.id.noResults)
-    protected View noResults;
+    View noResults;
 
     @Inject
-    protected ReportPresenter presenter;
+    ReportPresenter presenter;
 
     private int selectedPeriod;
     private Date selectedDate;
@@ -111,6 +112,10 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
             case app.outlay.R.id.action_list:
                 analytics().trackViewExpensesList();
                 goToExpensesList(selectedDate, selectedPeriod);
+                break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -142,6 +147,9 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
                         break;
                     case ReportFragment.PERIOD_MONTH:
                         analytics().trackViewMonthlyExpenses();
+                        break;
+                    default:
+                        Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 updateTitle();
@@ -182,6 +190,9 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
                 endDate = DateUtils.getMonthEnd(selectedDate);
                 setTitle(DateUtils.toShortString(startDate) + " - " + DateUtils.toShortString(endDate));
                 break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 
@@ -206,6 +217,9 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
             case ReportFragment.PERIOD_MONTH:
                 startDate = DateUtils.getMonthStart(date);
                 endDate = DateUtils.getMonthEnd(date);
+                break;
+            default:
+                Toast.makeText(getActivity(), "Not valid option", Toast.LENGTH_SHORT).show();
                 break;
         }
         Navigator.goToExpensesList(getActivity(), startDate, endDate, category);

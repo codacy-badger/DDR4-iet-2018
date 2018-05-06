@@ -19,7 +19,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.math.BigDecimal;
@@ -40,7 +39,6 @@ import app.outlay.mvp.view.EnterExpenseView;
 import app.outlay.view.Navigator;
 import app.outlay.view.activity.base.DrawerActivity;
 import app.outlay.view.adapter.CategoriesGridAdapter;
-import app.outlay.view.adapter.ExpenseAdapter;
 import app.outlay.view.alert.Alert;
 import app.outlay.view.dialog.DatePickerFragment;
 import app.outlay.view.fragment.base.BaseMvpFragment;
@@ -53,37 +51,37 @@ import ca.barrenechea.widget.recyclerview.decoration.StickyHeaderDecoration;
 public class MainFragment extends BaseMvpFragment<EnterExpenseView, EnterExpensePresenter>
         implements EnterExpenseView {
     @BindView(app.outlay.R.id.chartIcon)
-    protected ImageView chartIcon;
+    ImageView chartIcon;
 
     @BindView(app.outlay.R.id.drawerIcon)
-    protected ImageView drawerIcon;
+    ImageView drawerIcon;
 
     @BindView(R.id.bottomSheet)
-    protected View bottomSheet;
+    View bottomSheet;
 
     @BindView(app.outlay.R.id.categoriesGrid)
-    protected RecyclerView categoriesGrid;
+    RecyclerView categoriesGrid;
 
     @BindView(R.id.timelineRecycler)
-    protected RecyclerView timelineRecycler;
+    RecyclerView timelineRecycler;
 
     @BindView(app.outlay.R.id.amountEditable)
-    protected EditText amountText;
+    EditText amountText;
 
     @BindView(app.outlay.R.id.addCategory)
-    protected Button addCategory;
+    Button addCategory;
 
     @BindView(app.outlay.R.id.dateLabel)
-    protected TextView dateLabel;
+    TextView dateLabel;
 
     @BindView(R.id.expenseNote)
-    protected EditText expenseNote;
+    EditText expenseNote;
 
     @BindView(R.id.bottomSheetToolbar)
-    protected Toolbar bottomSheetToolbar;
+    Toolbar bottomSheetToolbar;
 
     @Inject
-    protected EnterExpensePresenter presenter;
+    EnterExpensePresenter presenter;
 
     @Inject
     User currentUser;

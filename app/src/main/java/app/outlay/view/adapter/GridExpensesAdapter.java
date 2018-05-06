@@ -46,22 +46,22 @@ public class GridExpensesAdapter extends ExpenseAdapter<GridExpensesAdapter.Expe
 
     public class ExpenseGridItemViewHolder extends RecyclerView.ViewHolder {
         @BindView(app.outlay.R.id.categoryNote)
-        protected TextView note;
+        TextView note;
 
         @BindView(app.outlay.R.id.expenseContainer)
-        protected View root;
+        View root;
 
         @BindView(app.outlay.R.id.categoryIcon)
-        protected PrintView categoryIcon;
+        PrintView categoryIcon;
 
         @BindView(app.outlay.R.id.categoryTitle)
-        protected TextView categoryTitle;
+        TextView categoryTitle;
 
         @BindView(app.outlay.R.id.categoryDate)
-        protected TextView categoryDate;
+        TextView categoryDate;
 
         @BindView(app.outlay.R.id.categoryAmount)
-        protected TextView categoryAmount;
+        TextView categoryAmount;
 
         public ExpenseGridItemViewHolder(View v) {
             super(v);

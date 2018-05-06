@@ -38,22 +38,22 @@ public class CategoryDetailsFragment extends BaseMvpFragment<CategoryDetailsView
     public static final String ARG_CATEGORY_PARAM = "_argCategoryId";
 
     @BindView(app.outlay.R.id.toolbar)
-    protected Toolbar toolbar;
+    Toolbar toolbar;
 
     @BindView(app.outlay.R.id.iconsGrid)
-    protected RecyclerView iconsGrid;
+    RecyclerView iconsGrid;
 
     @BindView(app.outlay.R.id.colorPicker)
-    protected LineColorPicker colorPicker;
+    LineColorPicker colorPicker;
 
     @BindView(app.outlay.R.id.categoryName)
-    protected EditText categoryName;
+    EditText categoryName;
 
     @BindView(app.outlay.R.id.categoryInputLayout)
-    protected TextInputLayout categoryInputLayout;
+    TextInputLayout categoryInputLayout;
 
     @Inject
-    protected CategoryDetailsPresenter presenter;
+    CategoryDetailsPresenter presenter;
 
     private IconsGridAdapter adapter;
     private Category category;
