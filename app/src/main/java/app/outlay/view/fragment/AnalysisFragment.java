@@ -52,25 +52,25 @@ import butterknife.BindView;
 public class AnalysisFragment extends BaseMvpFragment<AnalysisView, AnalysisPresenter> implements AnalysisView {
 
     @BindView(app.outlay.R.id.categoryTitle)
-    MaterialAutoCompleteTextView categoryTitle;
+    protected MaterialAutoCompleteTextView categoryTitle;
 
     @BindView(app.outlay.R.id.barChart)
-    BarChart barChart;
+    protected BarChart barChart;
 
     @BindView(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    protected Toolbar toolbar;
 
     @BindView(app.outlay.R.id.categoryIcon)
-    ImageView categoryIcon;
+    protected ImageView categoryIcon;
 
     @BindView(app.outlay.R.id.startDate)
-    EditText startDateEdit;
+    protected EditText startDateEdit;
 
     @BindView(app.outlay.R.id.endDate)
-    EditText endDateEdit;
+    protected EditText endDateEdit;
 
     @Inject
-    AnalysisPresenter presenter;
+    protected AnalysisPresenter presenter;
 
     private CategoryAutoCompleteAdapter autoCompleteAdapter;
     private DayAxisValueFormatter dayAxisValueFormatter;

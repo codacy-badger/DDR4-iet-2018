@@ -152,15 +152,15 @@ public class ReportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     public class ReportViewHolder extends RecyclerView.ViewHolder {
         @BindView(app.outlay.R.id.amount)
-        TextView amountText;
+        protected TextView amountText;
         @BindView(app.outlay.R.id.title)
-        TextView titleText;
+        protected TextView titleText;
         @BindView(app.outlay.R.id.progressLayout)
-        ProgressLayout progressLayout;
+        protected ProgressLayout progressLayout;
         @BindView(app.outlay.R.id.icon)
-        PrintView icon;
+        protected PrintView icon;
         @BindView(app.outlay.R.id.reportContainer)
-        View reportContainer;
+        protected View reportContainer;
 
         public ReportViewHolder(View v) {
             super(v);

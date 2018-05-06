@@ -51,28 +51,28 @@ public class ExpensesDetailsFragment extends BaseMvpFragment<ExpenseDetailsView,
     public static final String ARG_DATE = "_argDate";
 
     @BindView(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    protected Toolbar toolbar;
 
     @BindView(app.outlay.R.id.categoryTitle)
-    MaterialAutoCompleteTextView categoryTitle;
+    protected MaterialAutoCompleteTextView categoryTitle;
 
     @BindView(app.outlay.R.id.categoryIcon)
-    ImageView categoryIcon;
+    protected ImageView categoryIcon;
 
     @BindView(app.outlay.R.id.amount)
-    EditText amount;
+    protected EditText amount;
 
     @BindView(app.outlay.R.id.note)
-    EditText note;
+    protected EditText note;
 
     @BindView(app.outlay.R.id.date)
-    EditText dateEdit;
+    protected EditText dateEdit;
 
     @BindView(app.outlay.R.id.amountInputLayout)
-    TextInputLayout amountInputLayout;
+    protected TextInputLayout amountInputLayout;
 
     @Inject
-    ExpenseDetailsPresenter presenter;
+    protected ExpenseDetailsPresenter presenter;
     private CategoryAutoCompleteAdapter autoCompleteAdapter;
     private Expense expense;
     private Category selectedCategory;

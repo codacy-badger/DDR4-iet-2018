@@ -112,13 +112,13 @@ public class CategoriesGridAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     public class CategoryViewHolder extends RecyclerView.ViewHolder {
         @BindView(app.outlay.R.id.categoryContainer)
-        View categoryContainer;
+        protected View categoryContainer;
 
         @BindView(app.outlay.R.id.categoryIcon)
-        ImageView categoryIcon;
+        protected ImageView categoryIcon;
 
         @BindView(app.outlay.R.id.categoryTitle)
-        TextView categoryTitle;
+        protected TextView categoryTitle;
 
         public CategoryViewHolder(View v) {
             super(v);
@@ -128,7 +128,7 @@ public class CategoriesGridAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     public class NumpadViewHolder extends RecyclerView.ViewHolder {
         @BindView(app.outlay.R.id.numpadView)
-        NumpadView numpadView;
+        protected NumpadView numpadView;
 
         public NumpadViewHolder(View v) {
             super(v);

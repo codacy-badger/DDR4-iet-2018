@@ -23,13 +23,13 @@ import butterknife.BindView;
 
 public class LoginFragment extends BaseMvpFragment<LoginView, LoginViewPresenter> implements LoginView {
     @Inject
-    LoginViewPresenter presenter;
+    protected LoginViewPresenter presenter;
 
     @BindView(app.outlay.R.id.loginForm)
-    LoginForm loginForm;
+    protected LoginForm loginForm;
 
     @BindView(app.outlay.R.id.progressLayout)
-    View progressLayout;
+    protected View progressLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

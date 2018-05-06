@@ -37,22 +37,22 @@ import butterknife.ButterKnife;
 public class CategoriesFragment extends BaseMvpFragment<CategoriesView, CategoriesPresenter> implements OnDragListener, CategoriesView {
 
     @BindView(app.outlay.R.id.toolbar)
-    Toolbar toolbar;
+    protected Toolbar toolbar;
 
     @BindView(app.outlay.R.id.categoriesGrid)
-    RecyclerView categoriesGrid;
+    protected RecyclerView categoriesGrid;
 
     @BindView(app.outlay.R.id.noContent)
-    View noContent;
+    protected View noContent;
 
     @BindView(app.outlay.R.id.noContentImage)
-    ImageView noContentImage;
+    protected ImageView noContentImage;
 
     @BindView(app.outlay.R.id.fab)
-    FloatingActionButton fab;
+    protected FloatingActionButton fab;
 
     @Inject
-    CategoriesPresenter presenter;
+    protected CategoriesPresenter presenter;
 
     private ItemTouchHelper mItemTouchHelper;
     private CategoriesDraggableGridAdapter adapter;
