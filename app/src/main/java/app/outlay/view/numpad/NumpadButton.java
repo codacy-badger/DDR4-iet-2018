@@ -24,11 +24,11 @@ public class NumpadButton extends RelativeLayout {
 
     @Nullable
     @BindView(app.outlay.R.id.textValue)
-    TextView textValue;
+    protected TextView textValue;
 
     @Nullable
     @BindView(app.outlay.R.id.numpadIcon)
-    PrintView numpadIcon;
+    protected PrintView numpadIcon;
 
     public NumpadButton(Context context) {
         super(context);

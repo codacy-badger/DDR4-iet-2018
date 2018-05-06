@@ -170,16 +170,16 @@ public class ReportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     public class ChartViewHolder extends RecyclerView.ViewHolder {
         @BindView(app.outlay.R.id.chart)
-        PieChart chart;
+        protected PieChart chart;
 
         @BindView(app.outlay.R.id.hideLabels)
-        ImageView hideLabels;
+        protected ImageView hideLabels;
 
         @BindView(app.outlay.R.id.previous)
-        ImageView prev;
+        protected ImageView prev;
 
         @BindView(app.outlay.R.id.next)
-        ImageView next;
+        protected ImageView next;
 
         public ChartViewHolder(View v) {
             super(v);
