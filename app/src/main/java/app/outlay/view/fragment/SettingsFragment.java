@@ -18,7 +18,7 @@ import app.outlay.mvp.presenter.SettingsPresenter;
 import app.outlay.mvp.view.SettingsView;
 import app.outlay.view.Navigator;
 import app.outlay.view.fragment.base.BaseMvpFragment;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -26,11 +26,11 @@ import butterknife.ButterKnife;
  */
 public class SettingsFragment extends BaseMvpFragment<SettingsView, SettingsPresenter> implements SettingsView {
 
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.themeControl)
+    @BindView(R.id.themeControl)
     View themeControl;
-    @Bind(R.id.themeName)
+    @BindView(R.id.themeName)
     TextView themeName;
 
     @Inject

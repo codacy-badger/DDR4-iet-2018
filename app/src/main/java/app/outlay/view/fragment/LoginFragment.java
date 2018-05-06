@@ -15,7 +15,7 @@ import app.outlay.view.fragment.base.BaseMvpFragment;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by bmelnychuk on 12/14/16.
@@ -25,10 +25,10 @@ public class LoginFragment extends BaseMvpFragment<LoginView, LoginViewPresenter
     @Inject
     LoginViewPresenter presenter;
 
-    @Bind(app.outlay.R.id.loginForm)
+    @BindView(app.outlay.R.id.loginForm)
     LoginForm loginForm;
 
-    @Bind(app.outlay.R.id.progressLayout)
+    @BindView(app.outlay.R.id.progressLayout)
     View progressLayout;
 
     @Override

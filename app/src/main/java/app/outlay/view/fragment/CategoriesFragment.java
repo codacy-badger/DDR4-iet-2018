@@ -28,7 +28,7 @@ import app.outlay.view.adapter.CategoriesDraggableGridAdapter;
 import app.outlay.view.fragment.base.BaseMvpFragment;
 import app.outlay.view.helper.itemtouch.OnDragListener;
 import app.outlay.view.helper.itemtouch.SimpleItemTouchHelperCallback;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -36,19 +36,19 @@ import butterknife.ButterKnife;
  */
 public class CategoriesFragment extends BaseMvpFragment<CategoriesView, CategoriesPresenter> implements OnDragListener, CategoriesView {
 
-    @Bind(app.outlay.R.id.toolbar)
+    @BindView(app.outlay.R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.categoriesGrid)
+    @BindView(app.outlay.R.id.categoriesGrid)
     RecyclerView categoriesGrid;
 
-    @Bind(app.outlay.R.id.noContent)
+    @BindView(app.outlay.R.id.noContent)
     View noContent;
 
-    @Bind(app.outlay.R.id.noContentImage)
+    @BindView(app.outlay.R.id.noContentImage)
     ImageView noContentImage;
 
-    @Bind(app.outlay.R.id.fab)
+    @BindView(app.outlay.R.id.fab)
     FloatingActionButton fab;
 
     @Inject

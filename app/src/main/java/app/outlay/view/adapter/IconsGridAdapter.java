@@ -11,7 +11,7 @@ import java.util.List;
 
 import app.outlay.utils.IconUtils;
 import app.outlay.view.OutlayTheme;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -92,10 +92,10 @@ public class IconsGridAdapter extends RecyclerView.Adapter<IconsGridAdapter.Cate
     }
 
     public class CategoryViewHolder extends RecyclerView.ViewHolder {
-        @Bind(app.outlay.R.id.categoryContainer)
+        @BindView(app.outlay.R.id.categoryContainer)
         View categoryContainer;
 
-        @Bind(app.outlay.R.id.categoryIcon)
+        @BindView(app.outlay.R.id.categoryIcon)
         PrintView categoryIcon;
 
         public CategoryViewHolder(View v) {

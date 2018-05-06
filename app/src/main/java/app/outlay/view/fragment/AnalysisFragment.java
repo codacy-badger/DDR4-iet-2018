@@ -43,7 +43,7 @@ import app.outlay.utils.IconUtils;
 import app.outlay.view.autocomplete.CategoryAutoCompleteAdapter;
 import app.outlay.view.dialog.DatePickerFragment;
 import app.outlay.view.fragment.base.BaseMvpFragment;
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by bmelnychuk on 2/10/17.
@@ -51,22 +51,22 @@ import butterknife.Bind;
 
 public class AnalysisFragment extends BaseMvpFragment<AnalysisView, AnalysisPresenter> implements AnalysisView {
 
-    @Bind(app.outlay.R.id.categoryTitle)
+    @BindView(app.outlay.R.id.categoryTitle)
     MaterialAutoCompleteTextView categoryTitle;
 
-    @Bind(app.outlay.R.id.barChart)
+    @BindView(app.outlay.R.id.barChart)
     BarChart barChart;
 
-    @Bind(app.outlay.R.id.toolbar)
+    @BindView(app.outlay.R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.categoryIcon)
+    @BindView(app.outlay.R.id.categoryIcon)
     ImageView categoryIcon;
 
-    @Bind(app.outlay.R.id.startDate)
+    @BindView(app.outlay.R.id.startDate)
     EditText startDateEdit;
 
-    @Bind(app.outlay.R.id.endDate)
+    @BindView(app.outlay.R.id.endDate)
     EditText endDateEdit;
 
     @Inject

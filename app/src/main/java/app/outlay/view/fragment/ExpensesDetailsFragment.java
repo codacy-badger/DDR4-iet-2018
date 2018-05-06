@@ -39,7 +39,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -50,25 +50,25 @@ public class ExpensesDetailsFragment extends BaseMvpFragment<ExpenseDetailsView,
     public static final String ARG_EXPENSE_ID = "_argExpenseId";
     public static final String ARG_DATE = "_argDate";
 
-    @Bind(app.outlay.R.id.toolbar)
+    @BindView(app.outlay.R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.categoryTitle)
+    @BindView(app.outlay.R.id.categoryTitle)
     MaterialAutoCompleteTextView categoryTitle;
 
-    @Bind(app.outlay.R.id.categoryIcon)
+    @BindView(app.outlay.R.id.categoryIcon)
     ImageView categoryIcon;
 
-    @Bind(app.outlay.R.id.amount)
+    @BindView(app.outlay.R.id.amount)
     EditText amount;
 
-    @Bind(app.outlay.R.id.note)
+    @BindView(app.outlay.R.id.note)
     EditText note;
 
-    @Bind(app.outlay.R.id.date)
+    @BindView(app.outlay.R.id.date)
     EditText dateEdit;
 
-    @Bind(app.outlay.R.id.amountInputLayout)
+    @BindView(app.outlay.R.id.amountInputLayout)
     TextInputLayout amountInputLayout;
 
     @Inject

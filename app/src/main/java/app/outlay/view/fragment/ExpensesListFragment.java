@@ -30,7 +30,7 @@ import app.outlay.view.Navigator;
 import app.outlay.view.adapter.ExpenseAdapter;
 import app.outlay.view.adapter.ListExpensesAdapter;
 import app.outlay.view.fragment.base.BaseMvpFragment;
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by Bogdan Melnychuk on 1/20/16.
@@ -40,25 +40,25 @@ public class ExpensesListFragment extends BaseMvpFragment<ExpensesView, Expenses
     public static final String ARG_DATE_FROM = "_argDateFrom";
     public static final String ARG_DATE_TO = "_argDateTo";
 
-    @Bind(app.outlay.R.id.recyclerView)
+    @BindView(app.outlay.R.id.recyclerView)
     RecyclerView recyclerView;
 
-    @Bind(app.outlay.R.id.toolbar)
+    @BindView(app.outlay.R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.fab)
+    @BindView(app.outlay.R.id.fab)
     FloatingActionButton fab;
 
-    @Bind(app.outlay.R.id.noResults)
+    @BindView(app.outlay.R.id.noResults)
     View noResults;
 
-    @Bind(app.outlay.R.id.filterCategoryIcon)
+    @BindView(app.outlay.R.id.filterCategoryIcon)
     PrintView filterCategoryIcon;
 
-    @Bind(app.outlay.R.id.filterCategoryName)
+    @BindView(app.outlay.R.id.filterCategoryName)
     TextView filterCategoryName;
 
-    @Bind(app.outlay.R.id.filterDateLabel)
+    @BindView(app.outlay.R.id.filterDateLabel)
     TextView filterDateLabel;
 
     @Inject

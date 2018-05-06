@@ -45,39 +45,39 @@ import app.outlay.view.fragment.base.BaseMvpFragment;
 import app.outlay.view.numpad.NumpadEditable;
 import app.outlay.view.numpad.SimpleNumpadValidator;
 import app.outlay.view.timeline.TimelineExpensesAdapter;
-import butterknife.Bind;
+import butterknife.BindView;
 import ca.barrenechea.widget.recyclerview.decoration.StickyHeaderDecoration;
 
 public class MainFragment extends BaseMvpFragment<EnterExpenseView, EnterExpensePresenter>
         implements EnterExpenseView {
-    @Bind(app.outlay.R.id.chartIcon)
+    @BindView(app.outlay.R.id.chartIcon)
     ImageView chartIcon;
 
-    @Bind(app.outlay.R.id.drawerIcon)
+    @BindView(app.outlay.R.id.drawerIcon)
     ImageView drawerIcon;
 
-    @Bind(R.id.bottomSheet)
+    @BindView(R.id.bottomSheet)
     View bottomSheet;
 
-    @Bind(app.outlay.R.id.categoriesGrid)
+    @BindView(app.outlay.R.id.categoriesGrid)
     RecyclerView categoriesGrid;
 
-    @Bind(R.id.timelineRecycler)
+    @BindView(R.id.timelineRecycler)
     RecyclerView timelineRecycler;
 
-    @Bind(app.outlay.R.id.amountEditable)
+    @BindView(app.outlay.R.id.amountEditable)
     EditText amountText;
 
-    @Bind(app.outlay.R.id.addCategory)
+    @BindView(app.outlay.R.id.addCategory)
     Button addCategory;
 
-    @Bind(app.outlay.R.id.dateLabel)
+    @BindView(app.outlay.R.id.dateLabel)
     TextView dateLabel;
 
-    @Bind(R.id.expenseNote)
+    @BindView(R.id.expenseNote)
     EditText expenseNote;
 
-    @Bind(R.id.bottomSheetToolbar)
+    @BindView(R.id.bottomSheetToolbar)
     Toolbar bottomSheetToolbar;
 
     @Inject

@@ -28,7 +28,7 @@ import java.util.Random;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import uz.shift.colorpicker.LineColorPicker;
 
 /**
@@ -37,19 +37,19 @@ import uz.shift.colorpicker.LineColorPicker;
 public class CategoryDetailsFragment extends BaseMvpFragment<CategoryDetailsView, CategoryDetailsPresenter> implements CategoryDetailsView {
     public static final String ARG_CATEGORY_PARAM = "_argCategoryId";
 
-    @Bind(app.outlay.R.id.toolbar)
+    @BindView(app.outlay.R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(app.outlay.R.id.iconsGrid)
+    @BindView(app.outlay.R.id.iconsGrid)
     RecyclerView iconsGrid;
 
-    @Bind(app.outlay.R.id.colorPicker)
+    @BindView(app.outlay.R.id.colorPicker)
     LineColorPicker colorPicker;
 
-    @Bind(app.outlay.R.id.categoryName)
+    @BindView(app.outlay.R.id.categoryName)
     EditText categoryName;
 
-    @Bind(app.outlay.R.id.categoryInputLayout)
+    @BindView(app.outlay.R.id.categoryInputLayout)
     TextInputLayout categoryInputLayout;
 
     @Inject
