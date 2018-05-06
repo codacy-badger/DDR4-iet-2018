@@ -84,7 +84,7 @@ public class MainFragment extends BaseMvpFragment<EnterExpenseView, EnterExpense
     protected EnterExpensePresenter presenter;
 
     @Inject
-    User currentUser;
+    protected User currentUser;
 
     private BottomSheetBehavior bottomSheetBehavior;
     private TimelineExpensesAdapter expensesAdapter;

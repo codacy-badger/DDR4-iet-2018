@@ -113,19 +113,19 @@ public class TimelineExpensesAdapter extends RecyclerView.Adapter<TimelineExpens
 
     public class ExpenseViewHolder extends RecyclerView.ViewHolder {
         @BindView(app.outlay.R.id.icon)
-        ImageView icon;
+        protected ImageView icon;
 
         @BindView(app.outlay.R.id.amount)
-        TextView amount;
+        protected TextView amount;
 
         @BindView(app.outlay.R.id.title)
-        TextView title;
+        protected TextView title;
 
         @BindView(app.outlay.R.id.note)
-        TextView note;
+        protected TextView note;
 
         @BindView(app.outlay.R.id.container)
-        View container;
+        protected View container;
 
         public ExpenseViewHolder(View v) {
             super(v);
