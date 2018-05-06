@@ -50,28 +50,27 @@ import butterknife.Bind;
  */
 
 public class AnalysisFragment extends BaseMvpFragment<AnalysisView, AnalysisPresenter> implements AnalysisView {
-    private static final int REF_TIMESTAMP = 1451660400;
 
     @Bind(app.outlay.R.id.categoryTitle)
-    protected MaterialAutoCompleteTextView categoryTitle;
+    MaterialAutoCompleteTextView categoryTitle;
 
     @Bind(app.outlay.R.id.barChart)
-    protected BarChart barChart;
+    BarChart barChart;
 
     @Bind(app.outlay.R.id.toolbar)
-    protected Toolbar toolbar;
+    Toolbar toolbar;
 
     @Bind(app.outlay.R.id.categoryIcon)
-    protected ImageView categoryIcon;
+    ImageView categoryIcon;
 
     @Bind(app.outlay.R.id.startDate)
-    protected EditText startDateEdit;
+    EditText startDateEdit;
 
     @Bind(app.outlay.R.id.endDate)
-    protected EditText endDateEdit;
+    EditText endDateEdit;
 
     @Inject
-    protected AnalysisPresenter presenter;
+    AnalysisPresenter presenter;
 
     private CategoryAutoCompleteAdapter autoCompleteAdapter;
     private DayAxisValueFormatter dayAxisValueFormatter;

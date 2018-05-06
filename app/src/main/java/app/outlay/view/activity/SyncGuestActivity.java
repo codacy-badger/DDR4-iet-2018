@@ -12,10 +12,10 @@ public class SyncGuestActivity extends ParentActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(app.outlay.R.layout.activity_single_fragment);
-        this.initializeActivity(savedInstanceState);
+        this.initializeActivity();
     }
 
-    private void initializeActivity(Bundle savedInstanceState) {
+    private void initializeActivity() {
         syncGuestFragment = new SyncGuestFragment();
         syncGuestFragment.setArguments(getIntent().getExtras());
         addFragment(app.outlay.R.id.fragment, syncGuestFragment);

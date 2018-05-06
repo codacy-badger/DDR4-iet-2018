@@ -112,13 +112,13 @@ public class CategoriesGridAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     public class CategoryViewHolder extends RecyclerView.ViewHolder {
         @Bind(app.outlay.R.id.categoryContainer)
-        protected View categoryContainer;
+        View categoryContainer;
 
         @Bind(app.outlay.R.id.categoryIcon)
-        protected ImageView categoryIcon;
+        ImageView categoryIcon;
 
         @Bind(app.outlay.R.id.categoryTitle)
-        protected TextView categoryTitle;
+        TextView categoryTitle;
 
         public CategoryViewHolder(View v) {
             super(v);

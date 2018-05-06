@@ -43,19 +43,19 @@ public class ReportFragment extends BaseMvpFragment<StatisticView, ReportPresent
     public static final int PERIOD_MONTH = 2;
 
     @Bind(app.outlay.R.id.recyclerView)
-    protected RecyclerView recyclerView;
+    RecyclerView recyclerView;
 
     @Bind(app.outlay.R.id.tabs)
-    protected TabLayout tabLayout;
+    TabLayout tabLayout;
 
     @Bind(app.outlay.R.id.toolbar)
-    protected Toolbar toolbar;
+    Toolbar toolbar;
 
     @Bind(app.outlay.R.id.noResults)
-    protected View noResults;
+    View noResults;
 
     @Inject
-    protected ReportPresenter presenter;
+    ReportPresenter presenter;
 
     private int selectedPeriod;
     private Date selectedDate;

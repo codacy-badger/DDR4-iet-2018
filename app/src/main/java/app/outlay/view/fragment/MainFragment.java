@@ -19,7 +19,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.math.BigDecimal;
@@ -40,7 +39,6 @@ import app.outlay.mvp.view.EnterExpenseView;
 import app.outlay.view.Navigator;
 import app.outlay.view.activity.base.DrawerActivity;
 import app.outlay.view.adapter.CategoriesGridAdapter;
-import app.outlay.view.adapter.ExpenseAdapter;
 import app.outlay.view.alert.Alert;
 import app.outlay.view.dialog.DatePickerFragment;
 import app.outlay.view.fragment.base.BaseMvpFragment;
@@ -53,37 +51,37 @@ import ca.barrenechea.widget.recyclerview.decoration.StickyHeaderDecoration;
 public class MainFragment extends BaseMvpFragment<EnterExpenseView, EnterExpensePresenter>
         implements EnterExpenseView {
     @Bind(app.outlay.R.id.chartIcon)
-    protected ImageView chartIcon;
+    ImageView chartIcon;
 
     @Bind(app.outlay.R.id.drawerIcon)
-    protected ImageView drawerIcon;
+    ImageView drawerIcon;
 
     @Bind(R.id.bottomSheet)
-    protected View bottomSheet;
+    View bottomSheet;
 
     @Bind(app.outlay.R.id.categoriesGrid)
-    protected RecyclerView categoriesGrid;
+    RecyclerView categoriesGrid;
 
     @Bind(R.id.timelineRecycler)
-    protected RecyclerView timelineRecycler;
+    RecyclerView timelineRecycler;
 
     @Bind(app.outlay.R.id.amountEditable)
-    protected EditText amountText;
+    EditText amountText;
 
     @Bind(app.outlay.R.id.addCategory)
-    protected Button addCategory;
+    Button addCategory;
 
     @Bind(app.outlay.R.id.dateLabel)
-    protected TextView dateLabel;
+    TextView dateLabel;
 
     @Bind(R.id.expenseNote)
-    protected EditText expenseNote;
+    EditText expenseNote;
 
     @Bind(R.id.bottomSheetToolbar)
-    protected Toolbar bottomSheetToolbar;
+    Toolbar bottomSheetToolbar;
 
     @Inject
-    protected EnterExpensePresenter presenter;
+    EnterExpensePresenter presenter;
 
     @Inject
     User currentUser;
